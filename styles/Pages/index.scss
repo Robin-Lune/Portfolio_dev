@@ -1,0 +1,59 @@
+@import "../Components/switch";
+@import "../Components/crt";
+@import "../Components/loader";
+@import "../Layout/header";
+@import "../Layout/footer";
+
+.ecran {
+  @include flex(column, space-between, center);
+  min-height: 100vh;
+}
+
+section {
+  @include flex(row, center, center);
+  width: 100%;
+  height: 100%;
+
+  .canevas {
+    @include flex(row, center, center);
+    max-width: 500px;
+    max-height: 500px;
+
+    #portrait {
+      margin-top: -80px;
+      width: 80%;
+      height: 100%;
+      border-radius: 40%;
+      object-fit: cover;
+      z-index: -10;
+      opacity: 0.6;
+    }
+  }
+
+  .text-bio {
+    margin: 1% 0 0 5%;
+    color: white;
+    width: 600px;
+
+    .typo-robin {
+      font-size: 2.5rem;
+    }
+
+    .typewriter-title {
+      padding: 1% 0 0 5%;
+      font-size: 2.5rem;
+      font-family: "shareTech";
+    }
+    .Typewriter {
+      display: inline-block;
+    }
+    p {
+      padding: 2% 0 0 10%;
+      font-size: 18px;
+      font-family: "shareTech";
+    }
+    #work {
+      margin-top: 30px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@mixin flex ($direction, $justify, $align){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+};
+
+@mixin tablet-up {
+    @media screen and (min-width: 768px) and (max-width: 1024px) { @content; }
+};
+
+@mixin desktop-up {
+    @media screen and (min-width: 1024px) { @content;}
+};
+@mixin desktop-mid-range {
+    @media screen and (min-width: 1024px) and (max-width: 1200px) { @content;}
+};

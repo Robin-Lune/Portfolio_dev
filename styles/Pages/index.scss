@@ -4,10 +4,7 @@
 @import "../Layout/header";
 @import "../Layout/footer";
 
-.ecran {
-  @include flex(column, space-between, center);
-  min-height: 100vh;
-}
+
 
 section {
   @include flex(row, center, center);

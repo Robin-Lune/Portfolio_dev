@@ -1,41 +1,20 @@
 .loader {
-    background: linear-gradient(180deg, rgb(20, 31, 44) 0%, rgb(21, 33, 54) 100%);
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    color: rgb(255, 246, 246);
-    height: 100vh;
-    width: 100%;
-    z-index: 2000;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+  background: linear-gradient(180deg, rgb(20, 31, 44) 0%, rgb(21, 33, 54) 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  color: rgb(255, 246, 246);
+  height: 100vh;
+  width: 100%;
+  z-index: 2000;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
-  .loader {
-    background: linear-gradient(180deg, rgb(20, 31, 44) 0%, rgb(21, 33, 54) 100%);
-    /* background-color: rgb(255, 255, 255); */
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    /* color: #fff; */
-    color: rgb(255, 246, 246);
-    height: 100vh;
-    width: 100%;
-    z-index: 2000;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .content {
-    opacity: 0;
-  }
-  .text2 {
-    opacity: 0;
-  }
-  .text3 {
-    opacity: 0;
-  }
-  .content-loader {
-    animation: flickering 1.5s infinite;
-  }
+.hide {
+  display: none;
+}
+.content-loader {
+  animation: flickering .5s infinite;
+}

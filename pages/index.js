@@ -1,21 +1,9 @@
 import Head from "next/head";
 import Typewriter from "typewriter-effect";
-import { useEffect } from "react";
 import Script from "next/script";
-
-import Loader from "../components/loader";
 
 
 const Home = () => {
-  if (typeof window !== "undefined") {
-  const loader = document.querySelector(".loader");
-  }
-
-  useEffect(() => {
-    setTimeout(function () {
-      loader.parentElement.removeChild(loader);
-    }, 3500);
-  }, []);
 
   return (
     <div className="Home">
@@ -35,6 +23,7 @@ const Home = () => {
         }}
         src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"
       />
+
       <Head>
         <title>Robin LEBON - Portfolio</title>
         <meta name="description" content="Site de Robin LEBON Développeur " />
@@ -62,6 +51,8 @@ const Home = () => {
                     .typeString("Vidéaste.")
                     .pauseFor(2000)
                     .deleteAll()
+                    .typeString("Plutôt Sy")
+                    .deleteAll()
                     .typeString("Sympa ;)")
                     .pauseFor(2000)
                     .deleteAll()
@@ -77,7 +68,6 @@ const Home = () => {
           <p id="work">#OPEN_TO_WORK</p>
         </div>
       </section>
-      <Loader/>
     </div>
   );
 };

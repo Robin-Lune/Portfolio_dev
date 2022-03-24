@@ -1,0 +1,63 @@
+
+.card {
+    background-color: rgb(235, 235, 235);
+    @include flex(column, center, center);
+    width: 350px;
+    height: 500px;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+  
+    .card-image {
+      @include flex(column, center, center);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .card-links {
+      @include flex(row, space-around, center);
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      .links {
+        cursor: pointer;
+        background-color: rgb(0, 0, 0);
+        padding: 5px 10px;
+        border-radius: 5px;
+        width: 40%;
+        text-align: center;
+        transform: scale(1);
+        a {
+          text-decoration: none;
+          color: rgb(79, 214, 0);
+        }
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+    }
+    .card-text {
+      @include flex(column, center, center);
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      font-family: "shareTech", sans-serif;
+      font-size: 18px;
+      h2,
+      h3 {
+        margin: 10px;
+        text-align: center;
+      }
+      ul {
+        @include flex(row, space-around, center);
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        li {
+          // list-style: square;
+          margin: 10px;
+        }
+      }
+    }
+  }

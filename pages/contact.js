@@ -1,9 +1,9 @@
 import Head from "next/head";
 
-const contact = () => {
+const Contact = () => {
   return (
     <div className="contact-container">
-        
+
       <Head>
         <title>Robin LEBON - contact</title>
         <meta
@@ -24,4 +24,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

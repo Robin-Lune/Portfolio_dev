@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const assistant = ({ idle, listening, found, notFound , bored,error}) => {
+const Assistant = ({ idle, listening, found, notFound , bored,error}) => {
   const [Idle, setIdle] = useState(idle);
   
 
@@ -19,4 +19,4 @@ const assistant = ({ idle, listening, found, notFound , bored,error}) => {
   );
 };
 
-export default assistant;
+export default Assistant;

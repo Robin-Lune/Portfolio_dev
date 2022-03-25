@@ -3,7 +3,7 @@ import Assistant from "../components/assistant";
 import Head from "next/head";
 
 
-const about = () => {
+const About = () => {
   const [bored, setBored] = useState(false);
   const [idle, setIdle] = useState(true);
   const [listening, setListening] = useState(false);
@@ -263,7 +263,7 @@ const about = () => {
 
   return (
     <div className="about-container">
-      
+
       <Head>
         <title>Robin LEBON - À propos</title>
         <meta
@@ -313,4 +313,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

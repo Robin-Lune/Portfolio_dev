@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 
-const header = () => {
+const Header = () => {
 
   return (
     <header>
@@ -40,4 +40,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

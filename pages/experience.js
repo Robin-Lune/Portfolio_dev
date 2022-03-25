@@ -1,9 +1,9 @@
 import Head from "next/head";
 
-const experience = () => {
+const Experience = () => {
   return (
     <div className="experience-container">
-      
+
       <Head>
         <title>Robin LEBON - Experience</title>
         <meta name="description" content="Informations me concernant." />
@@ -138,4 +138,4 @@ const experience = () => {
   );
 };
 
-export default experience;
+export default Experience;

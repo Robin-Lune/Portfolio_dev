@@ -1,7 +1,7 @@
-import React from "react";
 import { useEffect, useState } from "react";
 
-const loader = () => {
+const Loader = () => {
+
   const [loading1, setLoading1] = useState(true);
   const [loading2, setLoading2] = useState(false);
   const [loading3, setLoading3] = useState(false);
@@ -28,6 +28,7 @@ const loader = () => {
       setBlink3(true);
     }, 2500);
   }, []);
+
   if (audio !== null) {
   audio.play();
   }
@@ -56,4 +57,4 @@ const loader = () => {
   );
 };
 
-export default loader;
+export default Loader;

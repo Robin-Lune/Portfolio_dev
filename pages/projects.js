@@ -7,7 +7,7 @@ const Project = () => {
 const [project, setProject] = useState([]);
 
 useEffect(() => {
-    fetch("http://localhost:3000/api/projects")
+    fetch("/api/projets")
     .then(res => res.json())
     .then(data => setProject(data))
     .catch(err => console.log(err))
@@ -20,7 +20,7 @@ console.log(project)
   
 
     <div className="projects">
-      
+
         <Head>
         <title>Robin LEBON - Projets</title>
         <meta name="description" content="Portfolio des différents projets de développeur." />

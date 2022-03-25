@@ -1,10 +1,19 @@
-
+import Head from "next/head";
 
 const experience = () => {
   return (
     <div className="experience-container">
+      
+      <Head>
+        <title>Robin LEBON - Experience</title>
+        <meta name="description" content="Informations me concernant." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <h1>tree /Experience </h1>
-      <a href="./CV_LEBON_ROBIN_DEV_WEB.pdf" target='_blank'><p className="download">( wget robin_lebon.cv )</p></a>
+      <a href="./CV_LEBON_ROBIN_DEV_WEB.pdf" target="_blank">
+        <p className="download">( wget robin_lebon.cv )</p>
+      </a>
       <div className="main-window">
         <h2>Robin LEBON</h2>
         <h3>Développeur Frontend Junior</h3>
@@ -95,44 +104,35 @@ const experience = () => {
         </ul>
 
         <h4 className="new-section">Compétences</h4>
-        <ul className="list-simple" >
-            <li >REACT</li>
-            <li >NODE JS</li>
-            <li >NEXTJS</li>
-            <li >MYSQL</li>
-            <li >MONGODB</li>
-            <li >GIT</li>
+        <ul className="list-simple">
+          <li>REACT</li>
+          <li>NODE JS</li>
+          <li>NEXTJS</li>
+          <li>MYSQL</li>
+          <li>MONGODB</li>
+          <li>GIT</li>
         </ul>
-        
+
         <h4 className="new-section">Compétences Secondaire</h4>
         <ul className="list-simple">
-            <li>SASS</li>
-            <li >STYLED COMPONENT</li>
-            <li >ELECTRON</li>
+          <li>SASS</li>
+          <li>STYLED COMPONENT</li>
+          <li>ELECTRON</li>
         </ul>
 
         <h4 className="new-section">Langues</h4>
         <ul className="list-simple">
-          <li >
-            <p>
-              Anglais
-            </p>
+          <li>
+            <p>Anglais</p>
           </li>
-          <li >
-            <p>
-              Espagnol
-            </p>
+          <li>
+            <p>Espagnol</p>
           </li>
 
-          <li >
-            <p >
-              Langue des signes française
-            </p>
+          <li>
+            <p>Langue des signes française</p>
           </li>
-
-
         </ul>
-
       </div>
     </div>
   );

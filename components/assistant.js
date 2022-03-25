@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
-const assistant = ({ idle, listening, found, notFound , bored}) => {
+const assistant = ({ idle, listening, found, notFound , bored,error}) => {
   const [Idle, setIdle] = useState(idle);
   
 
  
-  const casse = ["(☓‿‿☓)", "(  ╥﹏╥)", "(  -__-)"];
+  const casse = ["(☓‿‿☓)", "(  ╥﹏╥)", "(  -__-)","(#__#  )"];
 
   return (
     <p className="assistant">
@@ -14,6 +14,7 @@ const assistant = ({ idle, listening, found, notFound , bored}) => {
       {found ? "(^‿‿^)" : null}
       {notFound ? casse[Math.floor(Math.random() * casse.length)] : null}
       {bored ? "(⇀‿‿↼)" : null}
+      {error ? "( ⌐■_■)" : null}
     </p>
   );
 };

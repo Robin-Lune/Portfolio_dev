@@ -1,0 +1,27 @@
+.contact-container{
+    @include flex(column, flex-start,center);
+    min-height: 80vh;
+    width: 100%;
+    font-family: "shareTech", sans-serif;
+    color: white;
+    h1{
+        font-size: 2.5rem;
+        color: rgb(88, 88, 88);
+        margin-bottom: 25px;
+    }
+}
+
+
+.contact{
+    @include flex(column, space-between,center);
+    min-height:100%;
+    width: auto;
+    margin-left: 25px;
+    a{
+        text-decoration: none;
+    }
+    p{
+        margin: 10px;
+        color: white;
+    }
+}

@@ -26,6 +26,13 @@ export default function handler(req, res) {
       code : 'https://github.com/Robin-Lune/Portfolio_dev',
       image : './images/site-dev.jpg',
       imageAlt: "Site Portfolio de développeur"
-    }
+    },
+    {
+      title : 'Bot Instagram',
+      description : 'Bot qui scrap les données selon la localisation. Puis recense les Hashtags les plus populaires.',
+      technologies : ['NodeJs', 'Puppeteer','Electron'],
+      image : './images/bot-insta.jpg',
+      imageAlt: "Bot instagram"
+    },
   ]);
 }

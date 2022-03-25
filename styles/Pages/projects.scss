@@ -12,11 +12,12 @@
 }
 
 .card-container {
-  @include flex(row, space-around, center);
+  @include flex(row, space-around,center);
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
   margin-top: 25px;
+  padding: 0 20px;
   
 }
 

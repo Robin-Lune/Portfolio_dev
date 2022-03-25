@@ -1,0 +1,49 @@
+.about-container {
+  @include flex(column, flex-start, center);
+  min-height: 70vh;
+  width: 100%;
+  font-family: "shareTech", sans-serif;
+  color: white;
+  h1 {
+    font-size: 2.5rem;
+    color: rgb(88, 88, 88);
+    margin-bottom: 25px;
+  }
+
+  .assistant-container {
+    // background-color: lightblue;
+    @include flex(row, space-around, flex-start);
+    width: 50%;
+    height: 350px;
+    margin: auto;
+    .assistant-image {
+    padding-top: 70px;
+    .assistant{
+        font-size: 2rem;
+    }
+    }
+  }
+  .dialog {
+    // background-color: beige;
+    @include flex(column, space-evenly, space-between);
+    width: 60%;
+    height: 100%;
+
+    .text-assistant {
+      text-align: justify;
+    }
+    .input-text {
+      background-color: transparent;
+      width: 100%;
+      height: auto;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-family: "shareTech", "sans-serif";
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

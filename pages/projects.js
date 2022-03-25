@@ -8,6 +8,7 @@ useEffect(() => {
     fetch("http://localhost:3000/api/projects")
     .then(res => res.json())
     .then(data => setProject(data))
+    .catch(err => console.log(err))
 }, [])
 
 console.log(project)

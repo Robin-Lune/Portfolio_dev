@@ -13,15 +13,12 @@ section {
 
   .canevas {
     @include flex(row, center, center);
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 380px;
+    max-height: 380px;
+    margin-top: -25px;
 
     #portrait {
-      margin-top: -80px;
-      width: 80%;
-      height: 100%;
       border-radius: 40%;
-      object-fit: cover;
       z-index: -10;
       opacity: 0.6;
     }

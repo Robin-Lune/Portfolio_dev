@@ -8,7 +8,7 @@ export default function handler(req, res) {
       technologies: ["Nginx", "NodeJs", "Express", "MYSQL", "REACT"],
       live: "https://groupomania.robin-lebon.com ",
       code: "https://github.com/Robin-Lune/RobinLebon_7_22072021",
-      image: "./images/groupomania.png",
+      image: "/images/groupomania.png",
       imageAlt: "Projet de réseau social d'entreprise"
     },
     {
@@ -16,7 +16,7 @@ export default function handler(req, res) {
       description: "Site vitrine de photographe.",
       technologies: ["Nginx", "NodeJs", "Express", "REACT"],
       live: "https://robin-lebon.com ",
-      image: "./images/site-photo.jpg",
+      image: "/images/site-photo.jpg",
       imageAlt: "Site vitrine de photographe"
     },
     {
@@ -24,14 +24,14 @@ export default function handler(req, res) {
       description : 'Site Portfolio de développeur.',
       technologies : ['Nginx', 'NextJs'],
       code : 'https://github.com/Robin-Lune/Portfolio_dev',
-      image : './images/site-dev.jpg',
+      image : '/images/site-dev.jpg',
       imageAlt: "Site Portfolio de développeur"
     },
     {
       title : 'Bot Instagram',
       description : 'Bot qui scrap les données selon la localisation. Puis recense les Hashtags les plus populaires.',
       technologies : ['NodeJs', 'Puppeteer','Electron'],
-      image : './images/bot-insta.jpg',
+      image : '/images/bot-insta.jpg',
       imageAlt: "Bot instagram"
     },
   ]);

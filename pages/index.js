@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Typewriter from "typewriter-effect";
 import Script from "next/script";
+import Image from "next/image";
 
+import profilePic from "../public/images/Portrait-2.png";
 
 const Home = () => {
-
   return (
     <div className="Home">
       <Script
@@ -32,7 +33,14 @@ const Home = () => {
 
       <section>
         <div className="canevas" id="canevas">
-          <img src="./images/Portrait-2.png" alt="" id="portrait" />
+          <Image
+            src={profilePic}
+            id="portrait"
+            width={500}
+            height={750}
+            alt="Portrait de Robin LEBON"
+          />
+
         </div>
         <div className="text-bio">
           <h2 className="typo-robin">ROBIN LEBON</h2>

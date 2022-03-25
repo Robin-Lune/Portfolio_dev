@@ -11,7 +11,7 @@ const Experience = () => {
       </Head>
 
       <h1>tree /Experience </h1>
-      <a href="./CV_LEBON_ROBIN_DEV_WEB.pdf" target="_blank">
+      <a href="./CV_LEBON_ROBIN_DEV_WEB.pdf" target="_blank" rel="noreferrer">
         <p className="download">( wget robin_lebon.cv )</p>
       </a>
       <div className="main-window">

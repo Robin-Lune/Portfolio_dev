@@ -3,6 +3,7 @@ import Head from "next/head";
 import Card from "../components/card";
 
 
+
 const Project = () => {
 const [project, setProject] = useState([]);
 

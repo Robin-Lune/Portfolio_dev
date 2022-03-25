@@ -13,7 +13,7 @@ const Loader = () => {
 
 
   
-  useEffect( async() => {
+  useEffect( () => {
     setAudio(new Audio('./boot-sequence.mp3'))
     
     setTimeout(function () {

@@ -263,6 +263,7 @@ const About = () => {
     if (e.key === "Enter") {
       getReponse(message);
       e.target.value = "";
+      e.target.blur();
       console.log("Enter");
     }
   };
@@ -300,6 +301,7 @@ const About = () => {
               placeholder="Votre question ici"
               onChange={(e) => handleSpeech(e)}
               onKeyDown={(e) => handlekeyPress(e)}
+              
             />
           </div>
         </div>

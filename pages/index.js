@@ -65,7 +65,7 @@ const Home = () => {
                     .pauseFor(2000)
                     .deleteAll()
                     .start();
-                }, 5000);
+                }, 1000);
               }}
               options={{
                 loop: true,

@@ -8,7 +8,7 @@ export default function handler(req, res) {
       technologies: ["Nginx", "NodeJs", "Express", "MYSQL", "REACT"],
       live: "https://groupomania.robin-lebon.com ",
       code: "https://github.com/Robin-Lune/RobinLebon_7_22072021",
-      image: "/images/groupomania.png",
+      image: "/images/groupomania.jpg",
       imageAlt: "Projet de réseau social d'entreprise"
     },
     {

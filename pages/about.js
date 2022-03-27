@@ -182,7 +182,7 @@ const About = () => {
       message.toLowerCase().includes("photo")
     ) {
       setResponse(
-        "Je suis à la base Auteur Photographe, mais suite à tous ces aléas du Covid ... j'ai décidé de faire une reconversion professionnelle dans un autre mêtier qui me passionnait et dans lequel j'avais déja des compétences."
+        "Je suis à la base Auteur Photographe, mais suite à tous ces aléas du Covid ... j'ai décidé de faire une reconversion professionnelle dans un autre mêtier qui me passionnait et dans lequel j'avais déjà des compétences."
       );
       setListening(false);
       setFound(true);
@@ -210,7 +210,7 @@ const About = () => {
       message.toLowerCase().includes("./about.sh") ||
       message.toLowerCase().includes("./about")
     ) {
-      setResponse(" Le programme est déja en cours d'éxécution...");
+      setResponse(" Le programme est déjà en cours d'éxécution...");
       setListening(false);
       setError(true);
       setShowMessage(true);
@@ -224,7 +224,7 @@ const About = () => {
       message.toLowerCase().includes("clr")
     ) {
       setResponse(
-        "Bonjour, je suis une partie numérisée de la mémoire de Robin ...qui certe n'est pas énorme dèja de base. Mais je ferais mon possible pour répondre à vos questions. "
+        "Bonjour, je suis une partie numérisée de la mémoire de Robin ...qui certe n'est pas énorme dèja de base. Mais je ferai mon possible pour répondre à vos questions. "
       );
       setListening(false);
       setFound(false);
@@ -286,7 +286,7 @@ const About = () => {
             R0b1: <br />
             {response
               ? response
-              : "Bonjour, je suis une partie numérisée de la mémoire de Robin ...qui certe n'est pas énorme dèja de base. Mais je ferais mon possible pour répondre à vos questions. "}
+              : "Bonjour, je suis une partie numérisée de la mémoire de Robin ...qui certes n'est pas énorme dèja de base. Mais je ferai mon possible pour répondre à vos questions. "}
           </p>
           {showMessage ? (
             <p>

@@ -34,4 +34,7 @@
   @include smartphone-up {
     margin: auto;
   }
+  @include tablet-up {
+    margin: auto;
+  }
 }

@@ -34,7 +34,7 @@ const Home = () => {
          <meta property="og:title" content="Robin LEBON | Développeur" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dev.robin-lebon.com" />
-        <meta property="og:image" content="https://www.dev.robin-lebon.com/_next/image?url=%2Fimages%2Fsite-dev.jpg&w=750&q=75" key="ogimage"/>
+        <meta name='image' property="og:image" content="https://www.dev.robin-lebon.com/_next/image?url=%2Fimages%2Fsite-dev.jpg&w=750&q=75" key="ogimage"/>
         <meta
           property="og:description"
           content="Portfolio de Robin LEBON Développeur"
@@ -71,7 +71,7 @@ const Home = () => {
                 setTimeout(() => {
                   typewriter
                     .typeString("Développeur.")
-                    .pauseFor(2000)
+                    .pauseFor(3500)
                     .deleteAll()
                     .typeString("Photographe.")
                     .pauseFor(2000)

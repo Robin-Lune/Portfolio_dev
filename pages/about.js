@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Assistant from "../components/assistant";
 import Head from "next/head";
 
-
 const About = () => {
   const [bored, setBored] = useState(false);
   const [idle, setIdle] = useState(true);
@@ -80,6 +79,7 @@ const About = () => {
   const getReponse = (message) => {
     if (
       message.toLowerCase() === "bonjour" ||
+      message.toLowerCase() === "bonjour " ||
       message.toLowerCase() === "salut" ||
       message.toLowerCase() === "coucou"
     ) {
@@ -140,7 +140,7 @@ const About = () => {
       message.toLowerCase().includes(" âge")
     ) {
       setResponse(
-        "Je suis agé de quelques cycles seulement, à l'éche11e humaine celà c0rrespond à environs ... 31 ans."
+        "Je suis agé de quelques cycles seulement, à l'éche11e humaine celà c0rrespond à environs ... 31 ans, plus ou moins le même âge que Robin."
       );
       setListening(false);
       setFound(true);
@@ -200,10 +200,10 @@ const About = () => {
       message.toLowerCase().includes("cd experience")
     ) {
       window.location.href = "/experience";
-    }else if (
+    } else if (
       message.toLowerCase().includes("contact") ||
       message.toLowerCase().includes("touch") ||
-      message.toLowerCase().includes("mail") 
+      message.toLowerCase().includes("mail")
     ) {
       window.location.href = "/contact";
     } else if (
@@ -269,7 +269,6 @@ const About = () => {
 
   return (
     <div className="about-container">
-
       <Head>
         <title>Robin LEBON - À propos</title>
         <meta

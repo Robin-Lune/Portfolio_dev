@@ -31,4 +31,7 @@
     margin: 10px;
     color: white;
   }
+  @include smartphone-up {
+    margin: auto;
+  }
 }

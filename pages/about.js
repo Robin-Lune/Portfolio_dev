@@ -294,7 +294,7 @@ const About = () => {
           ) : null}
           <div className="input-container">
             <input
-              autoFocus={true}
+              autoFocus={false}
               type="text"
               className="input-text"
               placeholder="Votre question ici"

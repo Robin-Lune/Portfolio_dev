@@ -4,16 +4,38 @@
     box-sizing: border-box;
 }
 
+html{
+    width: 100%;
+    height: 100%;
+}
+
 body{
     // background: linear-gradient(360deg, rgb(20, 31, 44) 0%, rgb(21, 33, 54) 100%);
     background: linear-gradient(360deg, rgb(31, 48, 68) 0%, rgb(30, 47, 77) 100%);
     font-family: "Orbitron", sans-serif;
     min-height: 100vh;
     width: 100%;
+    @include smartphone-up {
+        // font-size: 1.2rem;
+        width: 100%;    
+        height: 100%;
+    }
+}
+
+#__next {
+    width: 100%;
+    height: 100%;
 }
 
 .ecran {
     @include flex(column, space-between, center);
-    min-height: 100vh;
-    width: 100%;
+    // flex-grow: 1;
+    // min-height: 100vh;
+    // width: 100%;
+    // z-index: 1001;
+    // @include smartphone-up {
+    //     font-size: 1.2rem;
+    //     max-width: 100vw;
+    //     height: 100vh;
+    // }
   }

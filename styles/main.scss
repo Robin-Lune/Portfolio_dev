@@ -3,6 +3,12 @@
 @import "./Utils/variables";
 @import "./Base/base";
 
+@import "./Components/switch";
+@import "./Components/crt";
+@import "./Components/loader";
+@import "./Layout/header";
+@import "./Layout/footer";
+
 
 @import "./Pages/index";
 @import "./Pages/projects";

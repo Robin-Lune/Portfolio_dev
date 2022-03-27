@@ -1,13 +1,24 @@
+@import '../Components/card';
 .projects {
   @include flex(column, center, center);
   min-height: 100%;
   width: 100%;
-  margin-bottom: 15px;
+  color: white;
+  font-family: "shareTech", sans-serif;
+
+
   h1 {
-    font-family: "shareTech", sans-serif;
+    text-align: center;
     font-size: 2.5rem;
     color: rgb(88, 88, 88);
     margin-bottom: 15px;
+  }
+
+  @include tablet-up {
+    margin-top: 120px;
+  }
+  @include smartphone-up {
+    margin-top: 120px;
   }
 }
 
@@ -15,9 +26,13 @@
   @include flex(row, space-around,center);
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   margin-top: 25px;
   padding: 0 20px;
+
+  @include smartphone-up {
+    padding: 0;
+  }
   
 }
 

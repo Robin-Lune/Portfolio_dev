@@ -1,13 +1,24 @@
 .about-container {
-  @include flex(column, flex-start, center);
+  @include flex(column, space-between, center);
   min-height: 70vh;
   width: 100%;
-  font-family: "shareTech", sans-serif;
   color: white;
+  font-family: "shareTech", sans-serif;
+
   h1 {
+    text-align: center;
     font-size: 2.5rem;
     color: rgb(88, 88, 88);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    margin-top: -9px;
+  }
+
+  @include tablet-up {
+    margin-top: 130px;
+  }
+
+  @include smartphone-up {
+    margin-top: 110px;
   }
 
   .assistant-container {
@@ -17,10 +28,26 @@
     height: 350px;
     margin: auto;
     .assistant-image {
-    padding-top: 70px;
-    .assistant{
+      padding-top: 70px;
+      .assistant {
         font-size: 2rem;
+      }
     }
+    @include tablet-up {
+      width: 80%;
+    }
+    @include smartphone-up {
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 90%;
+      margin: 0;
+      .assistant-image {
+        padding-top: 0;
+        .assistant {
+          font-size: 2rem;
+        }
+      
+      }
     }
   }
   .dialog {
@@ -29,10 +56,14 @@
     width: 60%;
     height: 100%;
 
+    @include smartphone-up {
+      width: 100%;
+    }
+
     .text-assistant {
       text-align: justify;
     }
-    .input-container{
+    .input-container {
       position: relative;
       &::after {
         content: "";
@@ -58,7 +89,6 @@
       &:focus {
         outline: none;
       }
-      
     }
   }
 }

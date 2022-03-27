@@ -8,7 +8,7 @@
   right: 0;
   background: rgba(18, 16, 16, 0.1);
   opacity: 0;
-  z-index: 2;
+  z-index: 1001;
   pointer-events: none;
   /* animation: flicker 0.15s infinite; */
   animation: flicker 100s infinite;
@@ -29,7 +29,7 @@
       rgba(0, 255, 0, 0.02),
       rgba(0, 0, 255, 0.06)
     );
-  z-index: 2;
+  z-index: 1001;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
@@ -56,7 +56,7 @@
         rgba(0, 255, 0, 0.02),
         rgba(0, 0, 255, 0.06)
       );
-    z-index: 2;
+    z-index: 1001;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
   }

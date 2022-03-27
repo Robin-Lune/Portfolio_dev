@@ -7,6 +7,20 @@
     right: 25px;
     width: 150px;
     color: white;
+    z-index: 1500;
+
+    @include tablet-up {
+      position: fixed;
+      top:15px;
+      left: calc(5% + 120px);
+      color: rgb(170, 170, 170);
+    }
+    @include smartphone-up {
+      position: fixed;
+      top:15px;
+      left: calc(1% + 110px);
+      color: rgb(170, 170, 170);
+    }
   }
   input[type="checkbox"].toggle-switch {
     appearance: none;

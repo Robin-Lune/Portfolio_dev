@@ -200,6 +200,12 @@ const About = () => {
       message.toLowerCase().includes("cd experience")
     ) {
       window.location.href = "/experience";
+    }else if (
+      message.toLowerCase().includes("contact") ||
+      message.toLowerCase().includes("touch") ||
+      message.toLowerCase().includes("mail") 
+    ) {
+      window.location.href = "/contact";
     } else if (
       message.toLowerCase().includes("./about.sh") ||
       message.toLowerCase().includes("./about")

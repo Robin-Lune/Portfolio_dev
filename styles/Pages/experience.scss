@@ -1,6 +1,6 @@
 .experience-container {
     @include flex(column, center, center);
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   padding-left: 15px;
   color: white;
@@ -12,6 +12,13 @@
     font-size: 2.5rem;
     color: rgb(88, 88, 88);
     margin-bottom: 15px;
+  }
+
+  @include tablet-up {
+    margin-top: 120px;
+  }
+  @include smartphone-up {
+    margin-top: 120px;
   }
   .download {
       width: 220px;
@@ -120,6 +127,7 @@
     .list-simple{
         @include flex(column, flex-start, flex-start);
         padding-left: 15px;
+        list-style: none;
     }
   }
 }

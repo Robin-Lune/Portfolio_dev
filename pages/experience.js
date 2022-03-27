@@ -26,8 +26,8 @@ const Experience = () => {
             </p>
             <br />
             <p className="description">
-              Formation à distance, technologie principale: Javascript - Node Js
-              / React -
+              Formation à distance, technologie principale: Javascript- Node Js
+              / React 
             </p>
             <p className="description">
               Centre de formation (OPENCLASSROOMS) - Réunion - Paris

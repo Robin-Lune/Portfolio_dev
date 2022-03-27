@@ -9,12 +9,10 @@ const Loader = () => {
   const [blink2, setBlink2] = useState(false);
   const [blink3, setBlink3] = useState(false);
 
-  const [audio, setAudio] = useState(null);
 
 
   
   useEffect( () => {
-    setAudio(new Audio('./boot-sequence.mp3'))
     
     setTimeout(function () {
       setBlink1(false);
@@ -29,9 +27,6 @@ const Loader = () => {
     }, 2500);
   }, []);
 
-  if (audio !== null) {
-  audio.play();
-  }
   return (
     <div className="loader crt">
       <div className="box-loader">

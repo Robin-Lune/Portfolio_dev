@@ -7,7 +7,7 @@ import profilePic from "../public/images/Portrait-2.png";
 
 const Home = () => {
   return (
-    <div className="Home">
+    <div className="home">
       <Script
         onLoad={() => {
           const text = baffle(".typo-robin");

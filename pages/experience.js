@@ -49,7 +49,7 @@ const Experience = () => {
 
           <li className="list-element">
             <p className="list-title">
-              LICENSE PILOTE<span className="col">ULM / DRONE(S1-S3)</span> 2013
+              LICENCE PILOTE<span className="col">ULM / DRONE(S1-S3)</span> 2013
             </p>
             <br />
             <p className="description">Théorique instructeur </p>

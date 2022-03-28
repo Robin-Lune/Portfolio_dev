@@ -16,6 +16,9 @@
   }
   @include smartphone-up {
     margin-top: 110px;
+    h1{
+      font-size: 2rem;
+    }
   }
 }
 
@@ -23,7 +26,8 @@
   @include flex(column, space-between, center);
   min-height: 100%;
   width: auto;
-  margin-left: 25px;
+  margin: auto;
+
   a {
     text-decoration: none;
   }

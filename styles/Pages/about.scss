@@ -19,6 +19,9 @@
 
   @include smartphone-up {
     margin-top: 110px;
+    h1{
+      font-size: 2rem;
+    }
   }
 
   .assistant-container {

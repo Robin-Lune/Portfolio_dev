@@ -20,6 +20,9 @@
   @include smartphone-up {
     margin-top: 120px;
     padding-left: 0;
+    h1{
+      font-size: 2rem;
+    }
   }
   .download {
       width: 220px;

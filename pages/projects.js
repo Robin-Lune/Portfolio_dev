@@ -12,7 +12,6 @@ const Project = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(project);
 
   return (
     <div className="projects">

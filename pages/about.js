@@ -18,7 +18,7 @@ const About = () => {
       if (idle) {
         setIdle(false);
         setBored(true);
-        console.log(bored);
+        // console.log(bored);
         setTimeout(() => {
           setBored(false);
           setIdle(true);
@@ -31,7 +31,7 @@ const About = () => {
         setFound(false);
         setIdle(false);
         setListening(false);
-        console.log(bored);
+        // console.log(bored);
         setTimeout(() => {
           setBored(false);
           setNotFound(false);
@@ -46,7 +46,7 @@ const About = () => {
         setNotFound(false);
         setListening(false);
         setIdle(false);
-        console.log(bored);
+        // console.log(bored);
         setTimeout(() => {
           setBored(false);
           setNotFound(false);
@@ -61,7 +61,7 @@ const About = () => {
         setListening(false);
         setFound(false);
         setIdle(false);
-        console.log(bored);
+        // console.log(bored);
         setTimeout(() => {
           setBored(false);
           setNotFound(false);
@@ -257,14 +257,16 @@ const About = () => {
     setShowMessage(false);
     setError(false);
     setListening(true);
-    console.log(message);
+    // console.log(message);
   };
   const handlekeyPress = (e) => {
     if (e.key === "Enter") {
       getReponse(message);
       e.target.value = "";
-      e.target.blur();
-      console.log("Enter");
+      if (window.innerWidth < 1025){
+        e.target.blur();
+      }
+      // console.log("Enter");
     }
   };
 
@@ -301,7 +303,6 @@ const About = () => {
               placeholder="Votre question ici"
               onChange={(e) => handleSpeech(e)}
               onKeyDown={(e) => handlekeyPress(e)}
-              
             />
           </div>
         </div>

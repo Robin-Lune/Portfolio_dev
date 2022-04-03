@@ -27,6 +27,7 @@
       z-index: 10;
       transition: all 100ms ease-in-out;
       opacity: 0.6;
+      filter: saturate(3227%) brightness(180%) contrast(90%);
       &:hover {
         transform: scale(1.2);
         color: lightblue;

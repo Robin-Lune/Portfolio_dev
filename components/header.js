@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const Header = () => {
+  const router = useRouter();
   const [burgerStatus, setBurgerStatus] = useState(false);
 
   const toggleBurger = () => {
@@ -44,7 +46,7 @@ const Header = () => {
           <ul>
             <li>
               <Link href="/projects" >
-                <a className="navigation-link" onClick={function (event) {
+                <a className={`navigation-link ${router.pathname == "/projects" ? "active" : ""}`} onClick={function (event) {
               toggleBurger();
               transition();
             }}>Projets</a>
@@ -52,7 +54,7 @@ const Header = () => {
             </li>
             <li>
               <Link href="/experience">
-                <a className="navigation-link" onClick={function (event) {
+                <a className={`navigation-link ${router.pathname == "/experience" ? "active" : ""}`} onClick={function (event) {
               toggleBurger();
               transition();
             }} >Exp.</a>
@@ -60,7 +62,7 @@ const Header = () => {
             </li>
             <li>
               <Link href="/about">
-                <a className="navigation-link" onClick={function (event) {
+                <a className={`navigation-link ${router.pathname == "/about" ? "active" : ""}`} onClick={function (event) {
               toggleBurger();
               transition();
             }}>À propos</a>
@@ -68,7 +70,7 @@ const Header = () => {
             </li>
             <li>
               <Link href="/contact">
-                <a className="navigation-link" onClick={function (event) {
+                <a className={`navigation-link ${router.pathname == "/contact" ? "active" : ""}`} onClick={function (event) {
               toggleBurger();
               transition();
             }}>Contact</a>

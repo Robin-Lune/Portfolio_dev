@@ -1,4 +1,5 @@
 .home {
+  @include flex(column, center, center);
   min-height: 70vh;
   width: 100%;
 

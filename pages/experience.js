@@ -126,11 +126,11 @@ const Experience = () => {
             <p>Anglais</p>
           </li>
           <li>
-            <p>Espagnol</p>
+            <p>Espagnol (notions)</p>
           </li>
 
           <li>
-            <p>Langue des signes française</p>
+            <p>Langue des signes française (notions)</p>
           </li>
         </ul>
       </div>

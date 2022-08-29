@@ -1,54 +1,61 @@
 import Image from "next/image";
 
-const Card = ({ title, description, image, live, code, technologies }) => {
+const Card = ({ title, description, text, image, live, code, technologies }) => {
   return (
-    <div className="card">
-      <div className="card-image">
-        {/* <img
-            src={image}
-            alt="projet réseau social d'entreprise"
-            className="card-image"
-          /> */}
-        <Image
-          width={700}
-          height={420}
-          src={image}
-          alt={title}
-          className="card-image"
-        />
-        <div className="card-links">
-          {live ? (
-            <div className="links live">
-              <a href={live} target="_blank" rel="noreferrer">
-                <p>
-                  {"< "}LIVE{" />"}
-                </p>
-              </a>
-            </div>
-          ) : null}
+    <section className="card">
+      <div className="card__left_container">
+        <h2>{title}</h2>
+        <p>{description}</p>
 
-          {code ? (
-            <div className="links code">
-              <a href={code} target="_blank" rel="noreferrer">
-                <p>
-                  {"< "}CODE{" />"}
-                </p>
-              </a>
-            </div>
-          ) : null}
+        <div className="card__left_container__text">
+          <p>{text}</p>
+
         </div>
-        <div className="card-text">
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <h3>Technologies :</h3>
+        <div className="card__left_container__techno">
+          <h3>Technologies utilisées</h3>
+
           <ul>
             {technologies.map((tech) => (
               <li key={tech}>{tech}</li>
             ))}
           </ul>
         </div>
+
+
+        <div className="card__left_container__code">
+          {live ? (
+            <div className="link" >
+              <a href={live} target="_blank" rel="noreferrer" data-text="< LIVE />">
+                {"< "}LIVE{" />"}
+
+              </a>
+            </div>
+          ) : null}
+
+          {code ? (
+            <div className="link" >
+              <a href={code} target="_blank" rel="noreferrer" data-text="< CODE />">
+
+                {"< "}CODE{" />"}
+
+              </a>
+            </div>
+          ) : null}
+        </div>
+
       </div>
-    </div>
+
+      <div className="card__right_container">
+        <Image
+          width={520}
+          height={315}
+          src={image}
+          alt={title}
+          className="card-image"
+        />
+      </div>
+
+    </section>
   );
 };
 

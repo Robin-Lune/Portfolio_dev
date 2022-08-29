@@ -1,12 +1,11 @@
 .switch {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+   @include flex(column,center,center);
     top: 10px;
     right: 25px;
-    width: 150px;
-    color: white;
+    width: 60px;
+    color: rgb(20, 20, 20);
+    font-size: 1.2rem;
+    font-weight: bold;
     z-index: 1500;
 
     @include tablet-up {
@@ -31,13 +30,13 @@
     border-radius: 2em;
     background-color: #ddd;
     outline: 0;
-    cursor: pointer;
+    cursor: none;
     transition: background-color 0.09s ease-in-out;
     position: relative;
   }
   
   input[type="checkbox"].toggle-switch:checked {
-    background-color: #3af;
+    background-color: rgb(215, 216, 133);
   }
   
   input[type="checkbox"].toggle-switch::after {

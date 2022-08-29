@@ -1,102 +1,94 @@
-
 .card {
-    background-color: rgb(235, 235, 235);
-    @include flex(column, center, center);
-    width: 350px;
-    height: 500px;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 10px;
-    color: rgb(10, 10, 10);
+  @include flex(row, space-between, center);
+  width: 100vw;
+  height: 99vh;
+  margin: 1px;
+  // padding: 15px;
 
-    @include tablet-up {
-        width: 330px;
-        height: 520px;
+  &__left_container {
+    @include flex(column, flex-start, stretch);
+    // background-color: aqua;
+    width: 45%;
+    height: 100%;
+    padding: 18vh 0 0 100px;
+
+    h2 {
+      width: fit-content;
+      background-color: white;
+      color: black;
+      padding: 0 5px 0 5px;
+      margin-bottom: 15px;
     }
-    @include smartphone-up {
-        width: 100%;
-        min-height: 500px;
-        padding: 0;
-        padding-bottom: 20px;
-        margin-bottom: 35px;
-        overflow: hidden
+
+    &__text {
+      margin: 20px;
+      line-height: 1.6rem;
     }
 
-    
-  
-    .card-image {
-      @include flex(column, center, center);
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 10px;
-      @include smartphone-up{
-        max-height: 500px; 
-      }
-    }
-    .card-links {
-      @include flex(row, space-around, center);
-      width: 100%;
-      height: auto;
-      padding: 10px;
-      .links {
-        @include flex(row, center, center);
-        cursor: pointer;
-        background-color: rgb(0, 0, 0);
-        padding: 5px 10px;
-        border-radius: 5px;
-        width: 40%;
-        height: 35px;
-        text-align: center;
-        transform: scale(1);
-        a {
-          text-decoration: none;
-          color: rgb(79, 214, 0);
-        }
-        &:hover {
-          transform: scale(1.15);
-        }
-      }
-
-      @include smartphone-up{
-        margin: 0;
-        padding: 0;
-        .links{
-          height: 40px;
-          width: 150px;
-          margin : 10px;
-        }
-      }
-    }
-    .card-text {
-      @include flex(column, center, center);
-      width: 100%;
-      height: auto;
-      padding: 10px;
-      font-family: "shareTech", sans-serif;
-      font-size: 18px;
-
-      
-
-      h2,
-      h3 {
-        margin: 10px;
-        text-align: center;
-      }
+    &__techno {
+      margin: 20px;
       ul {
-        @include flex(row, space-around, center);
-        width: 100%;
-        height: auto;
+        @include flex(row, flex-start, stretch);
         flex-wrap: wrap;
+        width: 100%;
+        list-style: none;
         li {
-          // list-style: square;
           margin: 10px;
         }
       }
-      @include smartphone-up {
-        ul{
-          margin-bottom:10px;
+    }
+
+    &__code {
+      @include flex(row, center, center);
+      // background-color: aquamarine;
+      width: 100%;
+      margin: 10vh 0;
+      font-size: 1.2rem;
+      .link {
+        
+        a {
+         position: relative;
+         background-color: white;
+         border-radius: 5px;
+         padding: 5px;
+         margin: 4vh 3vw;
+         font-weight: bolder;
+         cursor: none;
+
+          &:hover {
+            background-color: transparent;
+            // color: white;
+            &::after {
+              content: attr(data-text);
+              position: absolute;
+              left: 1px;
+              top: 18%;
+              color: rgb(81, 219, 81);
+              z-index: 1;
+  
+              text-shadow: -1px 0 red;
+            }
+  
+            &::before {
+              content: attr(data-text);
+              position: absolute;
+              left: -1px;
+              top: 18%;
+              color: rgb(81, 219, 81);
+              text-shadow: 1px 0 blue;
+              z-index: 1;
+            }
+          }
         }
+
       }
     }
   }
+
+  &__right_container {
+    // background-color: rgb(30, 134, 134);
+    @include flex(column, center, center);
+    width: 55%;
+    height: 100%;
+  }
+}

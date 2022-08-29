@@ -1,4 +1,5 @@
 @import "./Utils/fonts";
+@import "./Utils/animations";
 @import "./Utils/mixins";
 @import "./Utils/variables";
 @import "./Base/base";
@@ -6,11 +7,11 @@
 @import "./Components/switch";
 @import "./Components/crt";
 @import "./Components/loader";
-@import "./Layout/header";
-@import "./Layout/footer";
+@import "./Layout/menu";
+@import "./Layout/leftColumn";
 
 
-@import "./Pages/index";
+@import "./Pages/home";
 @import "./Pages/projects";
 @import "./Pages/experience";
 @import "./Pages/about";

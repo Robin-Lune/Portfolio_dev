@@ -2,16 +2,23 @@
     @include flex(column, center, center);
   min-height: 100%;
   width: 100%;
-  padding-left: 15px;
+  padding-left: 100px;
+  margin-bottom: 20px;
   color: white;
   font-family: "shareTech", sans-serif;
 
 
   h1 {
+    position: fixed;
+    top:0;
+    right: 80px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
     text-align: center;
-    font-size: 2.5rem;
-    color: rgb(88, 88, 88);
-    margin-bottom: 15px;
+    font-family:'Michroma', sans-serif;
+    font-size: 6rem;
+    color: map-get($colors, "dark_bg");
+    @include stroke(1, #eeeeee);
   }
 
   @include tablet-up {
@@ -25,10 +32,42 @@
     }
   }
   .download {
-      width: 220px;
+    position: relative;
+    width: 230px;
+    font-size: 1.5rem;
     text-align: center;
     color: white;
-    cursor: pointer;
+    margin-top: 50px;
+    cursor: none;
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 2px;
+      text-shadow: -1px 0 red;
+      top: 0;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim 1s infinite linear alternate-reverse;
+    }
+
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      text-shadow: 1px 0 blue;
+      top: 0;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim-2 2s infinite linear alternate-reverse;
+    }
+  
+
+
     @include smartphone-up{
       width: 100%;
       font-size: 1.2rem;

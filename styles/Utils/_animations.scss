@@ -1,32 +1,39 @@
-@keyframes neonEffect {
-  0% {
-    opacity: 1;
-  }
-  15% {
-    opacity: 0.5;
-  }
-  20% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.5;
-  }
-  30% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
   }
 }
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+@keyframes noise-anim-img{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(1000)+px,9999px,random(1000)+px,0);
+    }
+  }
+}
+@keyframes noise-anim-img-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(1000)+px,9999px,random(1000)+px,0);
+    }
+  }
+}
+
+
+
+
 
 @keyframes flickering {
   0% {

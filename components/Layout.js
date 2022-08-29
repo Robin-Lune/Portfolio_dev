@@ -1,8 +1,9 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
-import SwitchBtn from "../components/switch";
+import Menu from "./menu";
+import LeftColumn from "./leftColumn";
 import { useEffect, useState } from "react";
 import Loader from "../components/loader";
+import Cursor from "./cursor";
+
 
 const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,11 +15,13 @@ const Layout = ({ children }) => {
   }, []);
   return (
     <main className="ecran  crt">
-      <SwitchBtn />
-      <Header />
+      <div className="noise"></div>
+      <Cursor/>
+      <LeftColumn />
       {children}
-      <Footer />
-      {isLoading ? <Loader /> : null}
+      <Menu />
+
+      {/* {isLoading ? <Loader /> : null} */}
 
     </main>
   );

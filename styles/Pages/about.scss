@@ -1,98 +1,61 @@
 .about-container {
-  @include flex(column, space-between, center);
-  min-height: 70vh;
+  @include flex(row, space-between, center);
+  min-height: 100vh;
   width: 100%;
-  color: white;
-  font-family: "shareTech", sans-serif;
 
-  h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: rgb(88, 88, 88);
-    margin-bottom: 15px;
-    margin-top: -9px;
-  }
-
-  @include tablet-up {
-    margin-top: 130px;
-  }
-
-  @include smartphone-up {
-    margin-top: 110px;
-    h1{
-      font-size: 2rem;
-    }
-  }
-
-  .assistant-container {
-    // background-color: lightblue;
-    @include flex(row, space-around, flex-start);
-    width: 50%;
-    height: 350px;
-    margin: auto;
-    .assistant-image {
-      padding-top: 70px;
-      .assistant {
-        font-size: 2rem;
-      }
-    }
-    @include tablet-up {
-      width: 80%;
-    }
-    @include smartphone-up {
-      flex-direction: column-reverse;
-      align-items: center;
-      width: 90%;
-      margin: 0;
-      font-size: 1.1rem;
-      .assistant-image {
-        padding-top: 0;
-        .assistant {
-          font-size: 2rem;
-        }
-      
-      }
-    }
-  }
-  .dialog {
-    // background-color: beige;
-    @include flex(column, space-evenly, space-between);
-    width: 60%;
+  .text_bio_container {
+    @include flex(column, center, stretch);
+    width: 55%;
     height: 100%;
+    padding: 0 0 0 100px;
 
-    @include smartphone-up {
-      width: 100%;
-    }
-
-    .text-assistant {
-      text-align: justify;
-    }
-    .input-container {
+    &__title {
+      font-size: 1.5rem;
       position: relative;
+
       &::after {
-        content: "";
-        display: block;
+        content: attr(data-text);
         position: absolute;
-        left: 0;
-        bottom: 10px;
-        width: 90%;
-        border-bottom: 1px solid white;
-        // animation: flickering .5s infinite;
+        left: 2px;
+        text-shadow: -1px 0 red;
+        top: 0;
+        color: white;
+        background: transparent;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim 1s infinite linear alternate-reverse;
+      }
+
+      &::before {
+        content: attr(data-text);
+        position: absolute;
+        left: -2px;
+        text-shadow: 1px 0 blue;
+        top: 0;
+        color: white;
+        background: transparent;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim-2 2s infinite linear alternate-reverse;
       }
     }
-    .input-text {
-      // position: relative;
-      background-color: transparent;
+
+    &__text {
       width: 100%;
-      height: auto;
-      border: none;
-      color: white;
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      font-family: "shareTech", "sans-serif";
-      &:focus {
-        outline: none;
-      }
+      text-align: justify;
+      margin: 30px 0 0 0;
+      line-height: 2rem;
+    }
+  }
+
+  .image_bio_container {
+    @include flex(column, stretch, center);
+    width: 45%;
+    height: 100%;
+    padding: 200px 100px 0 20px;
+    &__photo {
+      width: 85%;
+      max-width: 800px;
     }
   }
 }

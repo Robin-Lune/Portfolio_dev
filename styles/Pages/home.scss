@@ -1,0 +1,134 @@
+.index_container {
+  height: 100vh;
+  width: 100%;
+
+}
+.home {
+  @include flex(row, space-around, center);
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+
+  .background {
+    position: absolute;
+    width: 67vw;
+    max-width: 1500px;
+    overflow: hidden;
+    z-index: -5;
+  }
+
+  .main_text_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -20vh;
+    margin-left: 6.5vw;
+    // background-color: aqua;
+    p {
+      font-size: 2em;
+      font-weight: bolder;
+
+      .makeMeBiggerMfkr {
+        position: relative;
+        font-size: 3.4rem;
+        &::after {
+          content: attr(data-text);
+          position: absolute;
+          left: 2px;
+          text-shadow: -1px 0 red;
+          top: 0;
+          color: white;
+          background: transparent;
+          overflow: hidden;
+          clip: rect(0, 900px, 0, 0);
+          animation: noise-anim 1s infinite linear alternate-reverse;
+        }
+
+        &::before {
+          content: attr(data-text);
+          position: absolute;
+          left: -2px;
+          text-shadow: 1px 0 blue;
+          top: 0;
+          color: white;
+          background: transparent;
+          overflow: hidden;
+          clip: rect(0, 900px, 0, 0);
+          animation: noise-anim-2 2s infinite linear alternate-reverse;
+        }
+      }
+    }
+    .main_text_container__myJob {
+      width: fit-content;
+      color: rgb(12, 12, 12);
+      background-color: rgb(238, 238, 238);
+    }
+
+    .otw {
+      position: absolute;
+      bottom: -35vh;
+      left: 40vw;
+      font-size: 2rem;
+      text-decoration: underline;
+    }
+  }
+
+  .portrait_container {
+    @include flex(row, space-around, center);
+    position: relative;
+    height: 100vh;
+    width: 100px;
+
+    .portrait {
+      position: absolute;
+      left: -25vw;
+      width: auto;
+      height: 70vh;
+      z-index: -1;
+    }
+    .portrait1 {
+      position: absolute;
+      left: -25.4vw;
+      width: auto;
+      height: 70vh;
+      z-index: -1;
+      filter: sepia(2) hue-rotate(172deg) contrast(1.2) saturate(1);
+      opacity: 0.5;
+      animation: noise-anim-img 1s infinite linear alternate-reverse;
+    }
+
+    .portrait2 {
+      position: absolute;
+      left: -24.6vw;
+      width: auto;
+      height: 70vh;
+      z-index: -1;
+      filter: sepia(2) contrast(1.2) saturate(1);
+      opacity: 0.5;
+      animation: noise-anim-img-2 1.5s infinite linear alternate-reverse;
+    }
+
+    .--hidden {
+      display: none;
+    }
+  }
+
+  .right_side_text {
+    height: 90vh;
+    width: 220px;
+    position: absolute;
+    right: 40px;
+    padding-right: 1rem;
+    z-index: -15;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: map-get($colors, "dark_bg");
+    @include stroke(1, #eeeeee);
+    border-right: 1px solid white;
+  }
+}

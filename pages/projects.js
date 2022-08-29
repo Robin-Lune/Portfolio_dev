@@ -24,8 +24,9 @@ const Project = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>ls -a /Projects </h1>
-      <div className="card-container">
+      <h1>PROJETS</h1>
+
+<div className="card-container">
         {project.length === 0 ? (
           <Card
             key={null}
@@ -46,6 +47,7 @@ const Project = () => {
               live={proj.live}
               code={proj.code}
               image={proj.image}
+              text={proj.text}
             />
           ))
         )}

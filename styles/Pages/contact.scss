@@ -1,44 +1,44 @@
-.contact-container {
-  @include flex(column, flex-start, center);
-  min-height: 70vh;
+.contact {
+  @include flex(row, space-between, center);
+  min-height: 100vh;
   width: 100%;
-  font-family: "shareTech", sans-serif;
   color: white;
-  h1 {
-    font-size: 2.5rem;
-    color: rgb(88, 88, 88);
-    margin-bottom: 25px;
-    text-align: center;
-  }
 
-  @include tablet-up {
-    margin-top: 120px;
-  }
-  @include smartphone-up {
-    margin-top: 110px;
-    h1{
-      font-size: 2rem;
+  &__left_container{
+    @include flex(column,flex-start,stretch);
+
+    // background-color: lightcoral;
+    width: auto;
+    height: 100vh;
+    padding: 20vh 0 0 200px;
+
+    &__mail{
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+    &__phone{
+      font-size: 1rem;
+      font-weight: bolder;
+      margin-top: 25px;
     }
   }
-}
 
-.contact {
-  @include flex(column, space-between, center);
-  min-height: 100%;
-  width: auto;
-  margin: auto;
 
-  a {
-    text-decoration: none;
+  &__right_container{
+    height: 90vh;
+    width: 220px ;
+    position: absolute;
+    right: 40px;
+    padding-right: 1rem;
+    z-index: -15;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: map-get($colors, "dark_bg");
+    @include stroke(1, #eeeeee);
+    border-right: 1px solid white;
   }
-  p {
-    margin: 10px;
-    color: white;
-  }
-  @include smartphone-up {
-    margin: auto;
-  }
-  @include tablet-up {
-    margin: auto;
-  }
+ 
 }

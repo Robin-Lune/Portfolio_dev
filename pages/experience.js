@@ -10,9 +10,9 @@ const Experience = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>tree /Experience </h1>
-      <a href="./CV_LEBON_ROBIN_DEV_WEB.pdf" target="_blank" rel="noreferrer">
-        <p className="download">( wget robin_lebon.cv )</p>
+      <h1>Experience</h1>
+      <a href="./CV_LEBON_ROBIN_DEV_WEB.pdf" target="_blank" rel="noreferrer" title="Cliquez pour télécharger mon CV">
+        <p className="download" data-text='( wget robin_lebon.cv )'>( wget robin_lebon.cv )</p>
       </a>
       <div className="main-window">
         <h2>Robin LEBON</h2>

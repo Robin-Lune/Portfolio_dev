@@ -55,6 +55,7 @@ const Card = ({ title, description, text, image, live, code, technologies }) => 
         />
       </div>
 
+
     </section>
   );
 };

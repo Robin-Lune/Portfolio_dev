@@ -1,32 +1,50 @@
 .contact {
   @include flex(row, space-between, center);
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   color: white;
+  position: relative;
 
-  &__left_container{
-    @include flex(column,flex-start,stretch);
+  @include smartphone-up {
+    @include flex(row, center, center);
+    width: 100vw;
+  }
+  @include tablet-up {
+    @include flex(row, center, center);
+    width: 100vw;
+  }
 
-    // background-color: lightcoral;
+  &__left_container {
+    @include flex(column, flex-start, stretch);
     width: auto;
     height: 100vh;
     padding: 20vh 0 0 200px;
 
-    &__mail{
+    @include smartphone-up {
+      @include flex(column, center, flex-start);
+      width: 90%;
+      padding: 0;
+    }
+
+    &__mail {
       font-size: 1.5rem;
       font-weight: bolder;
+
+      @include smartphone-up {
+        font-size: 1rem;
+      }
     }
-    &__phone{
+    &__phone {
       font-size: 1rem;
       font-weight: bolder;
       margin-top: 25px;
+      color: white;
     }
   }
 
-
-  &__right_container{
+  &__right_container {
     height: 90vh;
-    width: 220px ;
+    width: 220px;
     position: absolute;
     right: 40px;
     padding-right: 1rem;
@@ -39,6 +57,36 @@
     color: map-get($colors, "dark_bg");
     @include stroke(1, #eeeeee);
     border-right: 1px solid white;
+
+    @include smartphone-up {
+      width: 20vw;
+      font-size: 2rem;
+      border: none;
+      right: 0px;
+      bottom: 0;
+      padding: 0;
+      text-align: start;
+      margin-bottom: 30px;
+      overflow: hidden;
+      h1{
+        position: absolute;
+        right: 30px;
+      }
+    }
+    @include tablet-up{
+      width: 20vw;
+      font-size: 2rem;
+      border: none;
+      right: 0px;
+      bottom: 0;
+      padding: 0;
+      text-align: start;
+      margin-bottom: 30px;
+      overflow: hidden;
+      h1{
+        position: absolute;
+        right: 30px;
+      }
+    }
   }
- 
 }

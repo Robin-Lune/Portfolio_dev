@@ -1,25 +1,65 @@
-@import '../Components/card';
+@import "../Components/card";
 .projects {
   @include flex(column, center, center);
   min-height: 100%;
   width: 100%;
+  position: relative;
 
-
-
-    h1 {
-      position: fixed;
-      top:10px;
-      right: 80px;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      text-align: center;
-      font-family:'Michroma', sans-serif;
-      font-size: 6rem;
-      color: map-get($colors, "dark_bg");
-      @include stroke(1, #eeeeee);
+  &__bg {
+    position: fixed;
+    top: -80px;
+    right: 0px;
+    width: 67vw;
+    max-width: 1500px;
+    overflow: hidden;
+    z-index: -5;
+    @include smartphone-up {
+      width: 200%;
+      top: 60px;
+      right: -45%;
     }
-  
+    @include tablet-up {
+      width: 150%;
+      top: -80px;
+      right: -45%;
+    }
+  }
 
-  
+  h1 {
+    position: fixed;
+    top: 10px;
+    right: 80px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    font-family: "Michroma", sans-serif;
+    font-size: 6rem;
+    color: map-get($colors, "dark_bg");
+    @include stroke(1, #eeeeee);
+
+    @include smartphone-up {
+      display: none;
+    }
+    @include tablet-up {
+      display: none;
+    }
+  }
+
+  .scroll_mobile {
+    display: none;
+    @include smartphone-up {
+      display: block;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      width: 30px;
+      z-index: -111;
+      // filter: sepia(2) saturate(10) brightness(.6) contrast(4000%) hue-rotate(120deg);
+    }
+  }
+
+  .--disengage--mobile {
+    filter: sepia(2) saturate(3.5) brightness(0.3) contrast(4000%)
+      hue-rotate(00deg);
+  }
 }
-

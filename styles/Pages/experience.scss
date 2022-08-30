@@ -1,5 +1,5 @@
 .experience-container {
-    @include flex(column, center, center);
+  @include flex(column, center, center);
   min-height: 100%;
   width: 100%;
   padding-left: 100px;
@@ -7,30 +7,35 @@
   color: white;
   font-family: "shareTech", sans-serif;
 
+  @include tablet-up {
+    margin-top: 120px;
+  }
+
+  @include smartphone-up {
+    margin-top: 80px;
+    padding-left: 0;
+  }
 
   h1 {
     position: fixed;
-    top:0;
+    top: 0;
     right: 80px;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
-    font-family:'Michroma', sans-serif;
+    font-family: "Michroma", sans-serif;
     font-size: 6rem;
     color: map-get($colors, "dark_bg");
     @include stroke(1, #eeeeee);
-  }
 
-  @include tablet-up {
-    margin-top: 120px;
-  }
-  @include smartphone-up {
-    margin-top: 120px;
-    padding-left: 0;
-    h1{
-      font-size: 2rem;
+    @include smartphone-up {
+      display: none;
+    }
+    @include tablet-up {
+      display: none;
     }
   }
+
   .download {
     position: relative;
     width: 230px;
@@ -65,11 +70,9 @@
       clip: rect(0, 900px, 0, 0);
       animation: noise-anim-2 2s infinite linear alternate-reverse;
     }
-  
 
-
-    @include smartphone-up{
-      width: 100%;
+    @include smartphone-up {
+      width: 180px;
       font-size: 1.2rem;
     }
   }
@@ -82,15 +85,15 @@
     margin-top: 25px;
 
     &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 85px;
-        left: 0;
-        height: 92%;
-        width: 15px;
-        border-left: 1px solid white;
-      }
+      content: "";
+      display: block;
+      position: absolute;
+      top: 85px;
+      left: 0;
+      height: 92%;
+      width: 15px;
+      border-left: 1px solid white;
+    }
     h2 {
       font-size: 1.5rem;
     }
@@ -122,16 +125,16 @@
         content: "";
         display: block;
         position: absolute;
-        top:-5px;
+        top: -5px;
         left: -25px;
         height: 80%;
         border-left: 1px solid white;
         border-bottom: 1px solid white;
-      } 
+      }
       .list-element {
         @include flex(column, flex-start, flex-start);
         margin: 0 0 25px 0;
-        
+
         .list-title {
           margin-top: 10px;
           position: relative;
@@ -154,19 +157,19 @@
         height: auto;
         margin: 5px 0 0 40px;
         position: relative;
-      // font-size: 1.2rem;
+        // font-size: 1.2rem;
 
         &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: -5px;
-            left: -40px;
-            width: 25px;
-            height: 90%;
-            border-bottom: 1px solid white;
-            border-left: 1px solid white;
-          }
+          content: "";
+          display: block;
+          position: absolute;
+          top: -5px;
+          left: -40px;
+          width: 25px;
+          height: 90%;
+          border-bottom: 1px solid white;
+          border-left: 1px solid white;
+        }
       }
     }
 
@@ -174,17 +177,16 @@
       margin: 0 40px 0 80px;
       @include tablet-up {
         margin: 0 40px 0 40px;
-
       }
       @include smartphone-up {
         margin: 0 20px 0 20px;
       }
     }
 
-    .list-simple{
-        @include flex(column, flex-start, flex-start);
-        padding-left: 15px;
-        list-style: none;
+    .list-simple {
+      @include flex(column, flex-start, flex-start);
+      padding-left: 15px;
+      list-style: none;
     }
   }
 }

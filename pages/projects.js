@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Card from "../components/card";
+import useReadingProgress from "../components/useReadingProgress";
 
 const Project = () => {
   const [project, setProject] = useState([]);
@@ -12,9 +13,29 @@ const Project = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const completion = useReadingProgress();
+  const [completed, setCompleted] = useState(false);
+
+  const changeCompletion = () => {
+    if (completion > 90) {
+      setCompleted(true);
+    } else if (document.body.scrollHeight === window.innerHeight) {
+      setCompleted(true);
+    } else {
+      setCompleted(false);
+    }
+  };
+
+  useEffect(() => {
+    changeCompletion();
+  });
+  console.log(completed)
 
   return (
     <div className="projects">
+
+      <img className="projects__bg" src="./images/cercle.png" alt="cercle" />
+
       <Head>
         <title>Robin LEBON - Projets</title>
         <meta
@@ -52,6 +73,7 @@ const Project = () => {
           ))
         )}
       </div>
+      <img className={`scroll_mobile ${completed ? "--disengage--mobile" : ""}`} src="./images/scroll.png" alt="flèche vers le bas" />
     </div>
   );
 };

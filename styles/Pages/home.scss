@@ -1,7 +1,6 @@
 .index_container {
   height: 100vh;
   width: 100%;
-
 }
 .home {
   @include flex(row, space-around, center);
@@ -10,6 +9,10 @@
   width: 100%;
   overflow: hidden;
 
+  @include smartphone-up {
+    height: 100vh;
+    width: 100vw;
+  }
 
   .background {
     position: absolute;
@@ -17,6 +20,14 @@
     max-width: 1500px;
     overflow: hidden;
     z-index: -5;
+    @include smartphone-up {
+      width: 130%;
+      left: 10%;
+    }
+    @include tablet-up {
+      width: 130%;
+      left: 10%;
+    }
   }
 
   .main_text_container {
@@ -26,13 +37,33 @@
     margin-top: -20vh;
     margin-left: 6.5vw;
     // background-color: aqua;
+
+    @include smartphone-up {
+      margin: auto;
+      width: fit-content;
+    }
+    @include tablet-up {
+      margin: auto 9vw;
+      width: 90%;
+    }
+
     p {
       font-size: 2em;
       font-weight: bolder;
 
+      @include smartphone-up {
+        font-size: 1.1em;
+      }
+
       .makeMeBiggerMfkr {
         position: relative;
         font-size: 3.4rem;
+
+        @include smartphone-up {
+          display: block;
+          font-size: 1.8em;
+        }
+
         &::after {
           content: attr(data-text);
           position: absolute;
@@ -72,6 +103,12 @@
       left: 40vw;
       font-size: 2rem;
       text-decoration: underline;
+
+      @include smartphone-up {
+        left: 30vw;
+        bottom: -25vh;
+        font-size: 1em;
+      }
     }
   }
 
@@ -81,12 +118,21 @@
     height: 100vh;
     width: 100px;
 
+    @include smartphone-up {
+      display: none;
+    }
+    @include tablet-up {
+      display: none;
+    }
+
+
     .portrait {
       position: absolute;
       left: -25vw;
       width: auto;
       height: 70vh;
       z-index: -1;
+      
     }
     .portrait1 {
       position: absolute;
@@ -130,5 +176,18 @@
     color: map-get($colors, "dark_bg");
     @include stroke(1, #eeeeee);
     border-right: 1px solid white;
+
+    @include smartphone-up {
+      right: -150px;
+      border: none;
+      font-size: 2.5rem;
+    }
+    @include tablet-up {
+      right: -7vw;
+      border: none;
+      // font-size: 2.5rem;
+    }
+
+
   }
 }

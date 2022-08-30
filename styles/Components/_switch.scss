@@ -2,23 +2,19 @@
    @include flex(column,center,center);
     top: 10px;
     right: 25px;
-    width: 60px;
+    width: 70px;
     color: rgb(20, 20, 20);
     font-size: 1.2rem;
     font-weight: bold;
     z-index: 1500;
 
-    @include tablet-up {
-      position: fixed;
-      top:15px;
-      left: calc(5% + 120px);
-      color: rgb(170, 170, 170);
-    }
+   
     @include smartphone-up {
       position: fixed;
-      top:15px;
-      left: calc(1% + 110px);
-      color: rgb(170, 170, 170);
+      top:0px;
+      right: 10px;
+      // transform: scale(1.2);
+      color: rgb(0, 0, 0);
     }
   }
   input[type="checkbox"].toggle-switch {
@@ -31,6 +27,9 @@
     background-color: #ddd;
     outline: 0;
     cursor: none;
+    @include tablet-up{
+      cursor: pointer;
+    }
     transition: background-color 0.09s ease-in-out;
     position: relative;
   }

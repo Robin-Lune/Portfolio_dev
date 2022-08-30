@@ -33,7 +33,7 @@ const About = () => {
           tard ça m’aurait valu des nuits blanches et des prises de tête ... Hé
           bien je le referais surement ! :p <br /> Aujourdhui me voici donc à suivre
           les traces du papa en tant que développeur web Frontend, avec un pti
-          coup de coeur pour ReactJS
+          coup de coeur pour ReactJS .
         </p>
       </div>
       <div className="image_bio_container">

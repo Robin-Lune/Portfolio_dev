@@ -1,16 +1,37 @@
 .card {
   @include flex(row, space-between, center);
   width: 100vw;
-  height: 99vh;
-  margin: 1px;
-  // padding: 15px;
+  height: 100vh;
+
+  @include smartphone-up {
+    @include flex(row, center, center);
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+  }
+  @include tablet-up {
+    @include flex(row, center, center);
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+  }
 
   &__left_container {
-    @include flex(column, flex-start, stretch);
+    @include flex(column, space-around, stretch);
     // background-color: aqua;
     width: 45%;
     height: 100%;
-    padding: 18vh 0 0 100px;
+    padding: 8vh 0 8vh 100px;
+
+    @include smartphone-up {
+      @include flex(column, space-between, stretch);
+      width: 90%;
+      padding: 0;
+    }
+    @include tablet-up {
+      @include flex(column, space-between, stretch);
+      width: 80%;
+      height: 70%;
+      padding: 0;
+    }
 
     h2 {
       width: fit-content;
@@ -18,15 +39,28 @@
       color: black;
       padding: 0 5px 0 5px;
       margin-bottom: 15px;
+
+      @include smartphone-up {
+        font-size: 1.1em;
+        margin-top: 40px;
+      }
     }
 
     &__text {
       margin: 20px;
       line-height: 1.6rem;
+
+      @include smartphone-up {
+        font-size: 0.9em;
+        margin: 10px;
+      }
     }
 
     &__techno {
       margin: 20px;
+      @include smartphone-up {
+        margin: 0px;
+      }
       ul {
         @include flex(row, flex-start, stretch);
         flex-wrap: wrap;
@@ -34,26 +68,35 @@
         list-style: none;
         li {
           margin: 10px;
+
+          @include smartphone-up {
+            font-size: 0.9em;
+            margin: 5px;
+          }
         }
       }
     }
 
     &__code {
       @include flex(row, center, center);
-      // background-color: aquamarine;
       width: 100%;
-      margin: 10vh 0;
+      margin-top: 5vh ;
       font-size: 1.2rem;
+
+      @include smartphone-up {
+        margin-bottom: 60px;
+        font-size: 1em;
+      }
+
       .link {
-        
         a {
-         position: relative;
-         background-color: white;
-         border-radius: 5px;
-         padding: 5px;
-         margin: 4vh 3vw;
-         font-weight: bolder;
-         cursor: none;
+          position: relative;
+          background-color: white;
+          border-radius: 5px;
+          padding: 5px;
+          margin: 4vh 3vw;
+          font-weight: bolder;
+          cursor: none;
 
           &:hover {
             background-color: transparent;
@@ -65,10 +108,10 @@
               top: 18%;
               color: rgb(81, 219, 81);
               z-index: 1;
-  
+
               text-shadow: -1px 0 red;
             }
-  
+
             &::before {
               content: attr(data-text);
               position: absolute;
@@ -80,7 +123,6 @@
             }
           }
         }
-
       }
     }
   }
@@ -90,5 +132,14 @@
     @include flex(column, center, center);
     width: 55%;
     height: 100%;
+
+    @include smartphone-up {
+      display: none;
+    }
+    @include tablet-up {
+      display: none;
+    }
   }
 }
+
+

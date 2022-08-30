@@ -139,17 +139,15 @@ const Menu = () => {
 
 
 
-
-
-
       <div className="menu__social_container" >
         <a
           href="https://twitter.com/Robin_Lune"
           target="_blank"
           rel="noreferrer"
-          className="social_container__link"
+          className={`social_container__link  ${burgerStatus ? "active_social" : ""}`}
         >
 
+          <p className={`social_text  ${burgerStatus ? "" : "--hidden"}`}>@ROBIN_LUNE</p>
 
           <img
             src="./images/Web/twitter.png"
@@ -161,8 +159,12 @@ const Menu = () => {
           href="https://www.instagram.com/robin_lune/"
           target="_blank"
           rel="noreferrer"
-          className="social_container__link"
+          className={`social_container__link  ${burgerStatus ? "active_social" : ""}`}
+
         >
+
+<p className={`social_text  ${burgerStatus ? "" : "--hidden"}`}>@ROBIN_LUNE</p>
+
           <img
             src="./images/Web/instagram.png"
             alt=""
@@ -173,8 +175,11 @@ const Menu = () => {
           href="https://github.com/Robin-Lune"
           target="_blank"
           rel="noreferrer"
-          className="social_container__link"
+          className={`social_container__link  ${burgerStatus ? "active_social" : ""}`}
+
         >
+          <p className={`social_text  ${burgerStatus ? "" : "--hidden"}`}>@ROBIN_LUNE</p>
+
           <img
             src="./images/Web/GitHub.png"
             alt=""
@@ -185,8 +190,11 @@ const Menu = () => {
           href="https://www.facebook.com/robin974"
           target="_blank"
           rel="noreferrer"
-          className="social_container__link"
+          className={`social_container__link  ${burgerStatus ? "active_social" : ""}`}
+
         >
+          <p className={`social_text  ${burgerStatus ? "" : "--hidden"}`}>@ROBIN_LUNE</p>
+
           <img
             src="./images/Web/facebook.png"
             alt=""

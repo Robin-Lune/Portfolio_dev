@@ -1,0 +1,59 @@
+.container_404 {
+  @include flex(column, center, center);
+  height: 100vh;
+  width: 100vw;
+
+  .side_text {
+    height: 90vh;
+    width: 220px;
+    position: absolute;
+    right: 0px;
+    padding-right: 1rem;
+    z-index: -15;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: map-get($colors, "dark_bg");
+    @include stroke(1, #eeeeee);
+    border-right: 1px solid white;
+
+  }
+
+  .error_title {
+    position: relative;
+    font-size: 10rem;
+    font-weight: bolder;
+
+    @include tablet-up{
+      font-size: 7em;
+    }
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 2px;
+      text-shadow: -1px 0 red;
+      top: 0;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim 1s infinite linear alternate-reverse;
+    }
+
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      text-shadow: 1px 0 blue;
+      top: 0;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim-2 2s infinite linear alternate-reverse;
+    }
+  }
+}

@@ -3,17 +3,17 @@
 export default function handler(req, res) {
   res.status(200).json([
     {
-      title: "Groupomania",
+      title: "Réseau social Groupomania",
       description: "Projet de réseau social pour une entreprise fictive.",
       technologies: [ "REACT","SASS", "NodeJs", "Express", "MYSQL","Bcrypt","Jwt","Nginx"],
       live: "https://groupomania.robin-lebon.com ",
       code: "https://github.com/Robin-Lune/RobinLebon_7_22072021",
       image: "/images/groupomania.jpg",
       imageAlt: "Projet de réseau social d'entreprise",
-      text:"Le projet consiste à construire un réseau social interne pour les employés de Groupomania. Le but de cet outil est de faciliter les interactions entre collègues." 
+      text:"Le projet consiste à construire un réseau social interne pour les employés de Groupomania. Le but de cet outil est de faciliter les interactions entre collègues. (Site fonctionnel vous pouvez vous inscrire et me laisser un petit mot!)" 
     },
     {
-      title: "Site professionnel de photographe",
+      title: "Robin LEBON photographe",
       description: "Site vitrine de photographe.",
       technologies: ["Nginx", "NodeJs", "Express", "REACT","Styled Component"],
       live: "https://robin-lebon.com ",

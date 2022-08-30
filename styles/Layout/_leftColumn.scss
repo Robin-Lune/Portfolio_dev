@@ -7,6 +7,10 @@
   height: 90vh;
   border-right: 1px solid white;
 
+  @include smartphone-up{
+    display: none;
+  }
+
 
 
  

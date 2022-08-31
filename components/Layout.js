@@ -1,7 +1,6 @@
 import Menu from "./menu";
 import LeftColumn from "./leftColumn";
 import { useEffect, useState } from "react";
-import Loader from "../components/loader";
 import Cursor from "./cursor";
 
 

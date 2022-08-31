@@ -6,7 +6,7 @@
   width: 50px;
   height: 90vh;
   border-right: 1px solid white;
-
+  z-index: 10;
   @include smartphone-up{
     display: none;
   }
@@ -20,6 +20,7 @@ a{
   height: 50vh;
  color: white;
  cursor: none
+ 
 }
 
   .left_column__line_container {

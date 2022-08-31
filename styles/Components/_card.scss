@@ -14,6 +14,11 @@
     margin-top: 60px;
   }
 
+
+  /**
+  * LEFT CONTAINER -  PROJECTS INFO
+  **/
+
   &__left_container {
     @include flex(column, space-around, stretch);
     // background-color: aqua;
@@ -31,6 +36,11 @@
       width: 80%;
       height: 70%;
       padding: 0;
+    }
+
+    &__2 {
+      @include flex(column, space-around, stretch);
+      height: 100%;
     }
 
     h2 {
@@ -80,7 +90,7 @@
     &__code {
       @include flex(row, center, center);
       width: 100%;
-      margin-top: 5vh ;
+      margin-top: 5vh;
       font-size: 1.2rem;
 
       @include smartphone-up {
@@ -127,6 +137,10 @@
     }
   }
 
+
+  /**
+  * RIGHT CONTAINER - PROJECT IMAGE
+  **/
   &__right_container {
     // background-color: rgb(30, 134, 134);
     @include flex(column, center, center);
@@ -141,5 +155,3 @@
     }
   }
 }
-
-

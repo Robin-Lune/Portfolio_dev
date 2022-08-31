@@ -4,6 +4,10 @@
   min-height: 100%;
   width: 100%;
   position: relative;
+  
+  /**
+  * BACKGROUND IMAGE
+  **/
 
   &__bg {
     position: fixed;
@@ -25,6 +29,10 @@
     }
   }
 
+
+  /**
+  * PROJECT  BANNER 
+  **/
   h1 {
     position: fixed;
     top: 10px;

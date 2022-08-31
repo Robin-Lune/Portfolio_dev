@@ -1,7 +1,16 @@
+/**
+* INDEX PAGE STYLE
+**/
+
 .index_container {
   height: 100vh;
   width: 100%;
 }
+
+/**
+* HOME PAGE STYLE
+**/
+
 .home {
   @include flex(row, space-around, center);
   position: relative;
@@ -12,7 +21,16 @@
   @include smartphone-up {
     height: 100vh;
     width: 100vw;
+    scroll-snap-align: none;
   }
+  @include tablet-up {
+
+    scroll-snap-align: none;
+  }
+
+  /**
+  * BACKGROUND IMAGE
+  **/
 
   .background {
     position: absolute;
@@ -29,6 +47,10 @@
       left: 10%;
     }
   }
+
+  /**
+  * LEFT CONTAINER - INTRO TEXT
+  **/
 
   .main_text_container {
     display: flex;
@@ -112,6 +134,10 @@
     }
   }
 
+  /**
+  * PORTRAIT CONTAINER
+  **/
+
   .portrait_container {
     @include flex(row, space-around, center);
     position: relative;
@@ -160,6 +186,10 @@
       display: none;
     }
   }
+
+  /**
+  * RIGHT SIDE BANNER
+  **/
 
   .right_side_text {
     height: 90vh;

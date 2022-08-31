@@ -36,6 +36,12 @@
 .crt {
   /* animation: textShadow 1.6s infinite; */
   animation: textShadow 100s infinite;
+  @include smartphone-up{
+    animation: none;
+  }
+  @include tablet-up{
+    animation: none;
+  }
 }
 @-moz-document url-prefix() {
   .crt::before {

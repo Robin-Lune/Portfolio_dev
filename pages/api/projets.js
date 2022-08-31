@@ -29,7 +29,7 @@ export default function handler(req, res) {
       code : 'https://github.com/Robin-Lune/Portfolio_dev',
       image : '/images/site-dev.jpg',
       imageAlt: "Site Portfolio de développeur",
-      text:"La difficulté dans ce projet à été de trouver le bon équilibre entre graphisme et technologies derrière pour qu'on puisse y retrouver ma personnalité ainsi qu'un aperçu de mes compétences. " 
+      text:"La difficulté dans ce projet a été de trouver le bon équilibre entre graphisme et les technologies utilisées pour qu'on puisse y retrouver ma personnalité ainsi qu'un aperçu de mes compétences. " 
       
 
     },

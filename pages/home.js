@@ -1,5 +1,6 @@
 import Head from "next/head";
 import {useState} from 'react';
+import { Parallax } from "react-scroll-parallax";
 
 
 
@@ -58,6 +59,8 @@ const Home = () => {
       </Head>
 
       <div className="main_text_container">
+      <Parallax speed={-10}>
+
         <p>
           Je suis <span className="makeMeBiggerMfkr" 
           onMouseOver={handleMouseOver}
@@ -68,7 +71,10 @@ const Home = () => {
         </p>
         <p className="main_text_container__myJob">développeur web Frontend,</p>
         <p>photographe, vidéaste.</p>
+        </Parallax>
+        <Parallax speed={5} >
         <p className="otw">#open_to_work</p>
+        </Parallax>
       </div>
       
       <div className="portrait_container">
@@ -81,6 +87,7 @@ const Home = () => {
         <h1>FRONTEND</h1>
         <h2>developer</h2>
       </div>
+
     </section>
   );
 };

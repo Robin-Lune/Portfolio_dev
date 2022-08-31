@@ -5,7 +5,18 @@
 
   @include smartphone-up {
     @include flex(row, center, center);
+    scroll-snap-align: none;
   }
+
+  @include tablet-up {
+    @include flex(row, center, flex-start);
+    scroll-snap-align: none;
+  }
+
+
+  /**
+  * LEFT CONTAINER - TEXT BIO
+  **/
 
   .text_bio_container {
     @include flex(column, center, stretch);
@@ -18,6 +29,11 @@
       padding: 0;
       width: 90%;
       margin: 100px 0 20px 0;
+      
+    }
+    @include tablet-up {
+      @include flex(column, center, center);
+      margin: 30px 0 0 0;
       
     }
 
@@ -65,6 +81,10 @@
     }
   }
 
+  /**
+  * RIGHT CONTAINER - PORTAIT BIO
+  **/
+
   .image_bio_container {
     @include flex(column, stretch, center);
     width: 45%;
@@ -73,6 +93,12 @@
 
     @include smartphone-up {
       display: none;
+    }
+    @include tablet-up {
+      width: 45%;
+    height: 100%;
+    margin-top: 20vh;
+    padding: 20px;
     }
 
     &__photo {

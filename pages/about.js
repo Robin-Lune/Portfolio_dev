@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-// import Assistant from "../components/assistant";
 import Head from "next/head";
+import { Parallax } from "react-scroll-parallax";
+
 
 
 
@@ -15,31 +16,35 @@ const About = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="text_bio_container">
+      <Parallax speed={20}className="text_bio_container" >
+      <div className="text_bio_container__2">
         <h1 className="text_bio_container__title" data-text="Développeur web Junior,">Développeur web Junior,</h1>
         <p className="text_bio_container__text">
           aussi loin que je me souvienne, l’informatique a toujours fait partie
           de ma vie. J’ai eu la «chance» de pouvoir bousiller mes rétines depuis
           tout petit! Mon père ayant été le premier importateur Apple à la
-          Réunion et également l’un des premiers fournisseurs internet, ( Runnet
-          ... les vieux qui s’en souviennent on vous voit !) . j’ai toujours eu
+          Réunion et également l’un des premiers fournisseurs internet, (Runnet
+          ... les vieux qui s’en souviennent force à vous !) . j’ai toujours eu
           les yeux rivés sur un écran à «bidouiller» et programmer. Je me vois
-          encore entrer dans la salle des serveurs et être hypnotiser devant
+          encore entrer dans la salle des serveurs et être hypnotisé devant
           toutes ces lumières qui clignotent, ces lignes de codes qui défilent
           sur les écrans ...</p>
         <p className="text_bio_container__text"> Ha l’innocence !</p>
 
         <p className="text_bio_container__text"> Si j’avais su que des années plus
-          tard ça m’aurait valu des nuits blanches et des prises de tête ... Hé
-          bien je le referais surement ! :p <br /> Aujourdhui me voici donc à suivre
-          les traces du papa en tant que développeur web Frontend, avec un pti
-          coup de coeur pour ReactJS .
+          tard ça m’aurait valu des nuits blanches et des prises de tête ... éh
+          bien je le referais sûrement ! :p <br /> Aujourdhui me voici donc à suivre
+          les traces du Papa mais en tant que développeur web.
         </p>
       </div>
-      <div className="image_bio_container">
+      </Parallax>
+      <Parallax speed={-5}className="image_bio_container" >
+      
+      <div className="image_bio_container__2">
        <img src="./images/photoBio.jpg" alt="imade bio" className="image_bio_container__photo" />
 
       </div>
+      </Parallax>
     </section>
   );
 };

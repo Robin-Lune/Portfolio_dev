@@ -1,6 +1,6 @@
 .contact {
   @include flex(row, space-between, center);
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   color: white;
   position: relative;
@@ -8,22 +8,35 @@
   @include smartphone-up {
     @include flex(row, center, center);
     width: 100vw;
+    scroll-snap-align: none;
   }
   @include tablet-up {
     @include flex(row, center, center);
+    scroll-snap-align: none;
     width: 100vw;
   }
+
+  /**
+  * LEFT CONTAINER - INFO 
+  **/
 
   &__left_container {
     @include flex(column, flex-start, stretch);
     width: auto;
-    height: 100vh;
+    height: 100%;
     padding: 20vh 0 0 200px;
 
     @include smartphone-up {
-      @include flex(column, center, flex-start);
+      @include flex(column, flex-start, flex-start);
       width: 90%;
-      padding: 0;
+      height: 100%;
+      padding: 15vh 0 0 0 ;
+    }
+    @include tablet-up {
+      // background-color: aqua;
+      @include flex(column, flex-start, flex-start);
+      width: 90%;
+      padding: 20vh 0 0 60px;
     }
 
     &__mail {
@@ -42,14 +55,19 @@
     }
   }
 
+
+  /**
+  * RIGHT CONTAINER - CONTACT BANNER
+  **/
+
   &__right_container {
     height: 90vh;
-    width: 220px;
+    width: 120px;
     position: absolute;
     right: 40px;
     padding-right: 1rem;
     z-index: -15;
-    font-size: 3rem;
+    font-size: 2em;
     font-weight: bolder;
     text-align: center;
     writing-mode: vertical-rl;
@@ -68,12 +86,12 @@
       text-align: start;
       margin-bottom: 30px;
       overflow: hidden;
-      h1{
+      h1 {
         position: absolute;
         right: 30px;
       }
     }
-    @include tablet-up{
+    @include tablet-up {
       width: 20vw;
       font-size: 2rem;
       border: none;
@@ -83,7 +101,7 @@
       text-align: start;
       margin-bottom: 30px;
       overflow: hidden;
-      h1{
+      h1 {
         position: absolute;
         right: 30px;
       }

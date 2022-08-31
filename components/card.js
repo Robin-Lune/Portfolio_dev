@@ -1,9 +1,14 @@
 import Image from "next/image";
+import { Parallax } from "react-scroll-parallax";
+
 
 const Card = ({ title, description, text, image, live, code, technologies }) => {
   return (
     <section className="card">
-      <div className="card__left_container">
+      <Parallax speed={15} className="card__left_container">
+
+      <div className="card__left_container__2">
+
         <h2>{title}</h2>
         <p>{description}</p>
 
@@ -44,8 +49,11 @@ const Card = ({ title, description, text, image, live, code, technologies }) => 
         </div>
 
       </div>
+      </Parallax>
 
-      <div className="card__right_container">
+      <Parallax speed={-30} className="card__right_container" >
+      
+      <div className="card__right_container__2">
         <Image
           width={520}
           height={315}
@@ -54,6 +62,8 @@ const Card = ({ title, description, text, image, live, code, technologies }) => 
           className="card-image"
         />
       </div>
+
+      </Parallax>
 
 
     </section>

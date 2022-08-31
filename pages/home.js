@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <section className="home">
       <img
-        src="./images/triangle.png"
+        src="./images/triangle2.png"
         alt="image d'un triangle"
         className="background"
       />

@@ -55,7 +55,7 @@ const Menu = () => {
   return (
     <aside className={`menu ${burgerStatus ? "bg-active" : ""}`}>
 
-      <img src="./images/carre.png" alt="" className={`menu_bg ${burgerStatus ? '' : '--hidden'}`} id='menu_bg' />
+      <img src="./images/carre2.png" alt="" className={`menu_bg ${burgerStatus ? '' : '--hidden'}`} id='menu_bg' />
 
       <div className="menu__burger_container" onClick={function (event) {
         toggleBurger();

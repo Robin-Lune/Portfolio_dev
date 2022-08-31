@@ -34,7 +34,7 @@ const Project = () => {
   return (
     <div className="projects">
 
-      <img className="projects__bg" src="./images/cercle.png" alt="cercle" />
+      <img className="projects__bg" src="./images/cercle2.png" alt="cercle" />
 
       <Head>
         <title>Robin LEBON - Projets</title>

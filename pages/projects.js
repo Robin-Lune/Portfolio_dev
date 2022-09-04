@@ -40,7 +40,7 @@ const Project = () => {
         <title>Robin LEBON - Projets</title>
         <meta
           name="description"
-          content="Portfolio des différents projets de développeur."
+          content="Portfolio de mes différents projets de développeur wet et web mobile. Vous pouvez y retrouver les liens de chaques sites et applications que j'ai réalisé, ainsi que leurs liens Github."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

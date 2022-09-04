@@ -1,0 +1,6 @@
+Sitemap: https://dev.robin-lebon.com/sitemap.xml
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*

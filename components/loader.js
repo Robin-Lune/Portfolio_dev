@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 const Loader = () => {
-
   const [loading1, setLoading1] = useState(true);
   const [loading2, setLoading2] = useState(false);
   const [loading3, setLoading3] = useState(false);
@@ -9,11 +8,7 @@ const Loader = () => {
   const [blink2, setBlink2] = useState(false);
   const [blink3, setBlink3] = useState(false);
 
-
-
-  
-  useEffect( () => {
-    
+  useEffect(() => {
     setTimeout(function () {
       setBlink1(false);
       setLoading2(true);
@@ -41,13 +36,24 @@ const Loader = () => {
           <span className={blink1 ? "content-loader" : "hide"}>|</span>
         </p>
         <p className={`text2 ${loading2 ? "" : "hide"}`}>
-          {">"} Starting Server <span className={blink2 ? "content-loader" : "hide"}>|</span>
+          {">"} Starting dedicated server{" "}
+          <span className={blink2 ? "content-loader" : "hide"}>|</span>
         </p>
         <p className={`text2 ${loading3 ? "" : "hide"}`}>
-          {">"} root@remoteHost:~#{" "}
+          {">"} Thanks for using our Services{" "}
           <span className={blink3 ? "content-loader" : "hide"}>|</span>
         </p>
       </div>
+
+      <div className="loading_bar_container">
+        <div className="progress">
+          <div className="progress-value"></div>
+        </div>
+        <p> LOADING... </p>
+      </div>
+
+
+
     </div>
   );
 };

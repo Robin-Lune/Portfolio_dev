@@ -1,16 +1,9 @@
 
 .loader {
-  background: linear-gradient(180deg, rgb(20, 31, 44) 0%, rgb(21, 33, 54) 100%);
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  color: rgb(255, 246, 246);
   height: 100vh;
-  width: 100%;
-  z-index: 2000;
-  position: absolute;
-  left: 0;
-  top: 0;
+  width:100vw;
+  @include flex(column,center,center);
+  // font-family:'ShareTech', sans-serif;
 }
 
 .hide {
@@ -18,4 +11,45 @@
 }
 .content-loader {
   animation: flickering .5s infinite;
+}
+
+.box-loader{
+  position: absolute;
+  top: 5vh;
+  left: 10vw;
+}
+
+
+.loading_bar_container{
+  @include flex(column,center,center);
+  position: absolute;
+  bottom: 10vh;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 30rem;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  40% { width: 48%; }
+  90%{width: 90%;}
+  100% { width: 100%; }
 }

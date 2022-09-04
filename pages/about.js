@@ -12,7 +12,7 @@ const About = () => {
         <title>Robin LEBON - À propos</title>
         <meta
           name="description"
-          content="Un assistant qui répond à vos questions à propos de moi."
+          content="A propos de moi. Ce qui m'a mené à devenir développeur web et web mobile à la Réunion."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

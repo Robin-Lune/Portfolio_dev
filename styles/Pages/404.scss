@@ -3,6 +3,13 @@
   height: 100vh;
   width: 100vw;
 
+  
+  @include smartphone-up {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
   .side_text {
     height: 90vh;
     width: 220px;
@@ -19,6 +26,14 @@
     @include stroke(1, #eeeeee);
     border-right: 1px solid white;
 
+    @include smartphone-up {
+      width: fit-content;
+      right: 0;
+      bottom: 0;
+      border: none;
+      font-size: 2.5rem;
+    }
+
   }
 
   .error_title {
@@ -28,6 +43,10 @@
 
     @include tablet-up{
       font-size: 7em;
+    }
+    @include smartphone-up {  
+      font-size: 5rem;
+      
     }
 
     &::after {
@@ -56,4 +75,12 @@
       animation: noise-anim-2 2s infinite linear alternate-reverse;
     }
   }
+  p{
+    @include smartphone-up {  
+      text-align: center;
+      padding: 0 60px;
+      font-size: 1rem;
+    }
+  }
+  
 }

@@ -75,6 +75,8 @@
       animation: noise-anim-2 2s infinite linear alternate-reverse;
     }
   }
+
+  // Text 
   p{
     @include smartphone-up {  
       text-align: center;

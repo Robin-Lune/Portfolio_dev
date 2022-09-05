@@ -19,7 +19,7 @@ const Index = () => {
       <Head>
         <title>Robin LEBON développeur web</title>
         <meta name="description" content="Portoflio de Robin LEBON développeur web frontend à la Réunion. Développeur web à la Réunion, développeur React JS, développeur web et web mobile" />
-        <meta name="google-site-verification" content="6rqSOqil-415UCDGd9l2hogkBbdxXA0z9apVsA3KgH0" />
+        
 
         <link rel="icon" href="/favicon.ico" />
 

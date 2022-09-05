@@ -65,6 +65,10 @@ const Menu = () => {
         <span className="burger_container__line " id="burger-middle"></span>
         <span className="burger_container__line " id="burger-bottom"></span>
       </div>
+      <p className="menu_text"onClick={function (event) {
+        toggleBurger();
+        transition();
+      }} >MENU</p>
 
 
 

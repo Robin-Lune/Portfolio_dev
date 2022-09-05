@@ -70,6 +70,8 @@
     }
   }
 
+
+
   /**
   * NAVIGATION
   **/
@@ -146,6 +148,16 @@
   /**
   * BURGER
   **/
+  .menu_text {
+    // background-color: black;
+    position: absolute;
+    top: 60px;
+    left: 4px;
+    color: black;
+    @include smartphone-up {
+      display: none;
+    }
+  }
   .menu__burger_container {
     @include flex(column, center, center);
     position: absolute;

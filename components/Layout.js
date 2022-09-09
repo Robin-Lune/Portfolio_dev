@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     }, 3500);
   }, []);
   return (
-    <main className="ecran  crt">
+    <main className="ecran ">
       <div className="noise"></div>
       <Cursor/>
       <LeftColumn />

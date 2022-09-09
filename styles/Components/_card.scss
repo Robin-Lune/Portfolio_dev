@@ -2,6 +2,8 @@
   @include flex(row, space-between, center);
   width: 100vw;
   height: 100vh;
+  // scroll-snap-align: none;
+
 
   @include smartphone-up {
     @include flex(row, center, center);

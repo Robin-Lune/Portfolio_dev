@@ -8,7 +8,7 @@ const switchBtn = () => {
     return (
     <div className="switch">
         crt
-        <input type="checkbox" className="toggle-switch" id="checkbox" onChange={TVmode} defaultChecked/>
+        <input type="checkbox" className="toggle-switch" id="checkbox" onChange={TVmode} defaultUnChecked/>
       </div>
     );
 };

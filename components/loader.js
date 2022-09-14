@@ -23,8 +23,8 @@ const Loader = () => {
   }, []);
 
   return (
-    <div className="loader crt">
-      <div className="box-loader">
+    <div className="loader ">
+      {/* <div className="box-loader">
         <p className="text1">
           {">"} IPv4 supported
           <br />
@@ -43,7 +43,9 @@ const Loader = () => {
           {">"} Thanks for using our Services{" "}
           <span className={blink3 ? "content-loader" : "hide"}>|</span>
         </p>
-      </div>
+      </div> */}
+
+     <img src="./images/title.png" alt="logo de Robin LEBON" className="loading_image"/>
 
       <div className="loading_bar_container">
         <div className="progress">

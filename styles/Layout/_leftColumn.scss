@@ -7,21 +7,19 @@
   height: 90vh;
   border-right: 1px solid white;
   z-index: 10;
-  @include smartphone-up{
+  animation: slideRight 4.5s forwards;
+
+  @include smartphone-up {
     display: none;
   }
 
-
-
- 
-a{
-  @include flex(column,flex-start,center);
-  width: 100%;
-  height: 50vh;
- color: white;
- cursor: none
- 
-}
+  a {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    height: 50vh;
+    color: white;
+    cursor: none;
+  }
 
   .left_column__line_container {
     @include flex(column, space-around, center);
@@ -33,19 +31,25 @@ a{
     overflow: hidden;
     padding-bottom: 120px;
 
-    &__text{
+    &__text {
       position: absolute;
       right: 2%;
       top: 15px;
+      // font-family: "ShareTech";
       font-size: 1.5rem;
       font-weight: bolder;
       writing-mode: vertical-rl;
       text-align: center;
       // transform: rotate(180deg);
       z-index: 10;
-      @include stroke(1, black)
-  
+      @include stroke(1, rgb(0, 0, 0));
+      color: azure;
+      // background: -webkit-linear-gradient(90deg, rgba(233,165,165,1) 0%, rgba(174,162,219,1) 45%, rgba(129,193,217,1) 100%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      
     }
+  
 
     .line_container__line {
       background-color: yellow;
@@ -103,13 +107,13 @@ a{
     text-decoration: line-through;
     color: rgb(211, 102, 102);
     font-weight: bold;
-    
+
     &::after {
-      display:none;
+      display: none;
     }
 
     &::before {
-      display:none;
+      display: none;
     }
   }
 }

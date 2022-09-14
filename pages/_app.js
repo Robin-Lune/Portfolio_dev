@@ -24,8 +24,8 @@ function MyApp({ Component, pageProps }) {
           ></meta>
         </Head>
 
-        {/* {IsLoading ? <Loader /> : <Component {...pageProps} />} */}
-        <Component {...pageProps} />
+        {IsLoading ? <Loader /> : <Component {...pageProps} />}
+        {/* <Component {...pageProps} /> */}
       </Layout>
     </ParallaxProvider>
   );

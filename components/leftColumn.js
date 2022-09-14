@@ -42,6 +42,7 @@ const LeftColumn = () => {
           <span className="line_container__line"></span>
           <span className="line_container__line"></span>
         </div>
+
       </a>
       </Link>
 

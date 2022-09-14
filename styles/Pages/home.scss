@@ -17,6 +17,7 @@
   min-height: 100vh;
   width: 100vw;
   overflow: hidden;
+  animation: flickering-2 1s forwards;
 
   @include smartphone-up {
     height: 100vh;

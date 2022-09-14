@@ -9,12 +9,14 @@
   transition: all ease 500ms;
   color: black;
   z-index: 20;
+  animation: slideLeft 5s forwards;
 
   @include smartphone-up {
     top: 0;
     left: 0;
     width: 100vw;
     height: 60px;
+    animation: none;
   }
 
 /**
@@ -233,6 +235,8 @@
       transform: rotate(45deg);
       margin-top: 0.6em;
       transition: all ease 0.7s;
+      // border: 1px solid black;
+
     }
   }
 

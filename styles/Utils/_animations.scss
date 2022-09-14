@@ -35,6 +35,30 @@
 
 
 
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  80% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
 @keyframes flickering {
   0% {
     opacity: 1;
@@ -42,6 +66,16 @@
   50% {
     opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flickering-2 {
+  0% {
+    opacity: 0;
+  }
+
   100% {
     opacity: 1;
   }

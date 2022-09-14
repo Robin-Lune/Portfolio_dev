@@ -4,8 +4,11 @@
   min-height: 100%;
   width: 100%;
   position: relative;
+  scroll-snap-type: none;
 
-
+  @include smartphone-up {
+    scroll-snap-type: y mandatory;
+  }
 
   /**
   * BACKGROUND IMAGE

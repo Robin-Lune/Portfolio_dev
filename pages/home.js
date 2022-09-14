@@ -54,7 +54,7 @@ const Home = () => {
       </Head>
 
       <img
-        src="./images/triangle2.png"
+        src="./images/triangle2.webp"
         alt="image d'un triangle"
         className="background"
       />
@@ -81,9 +81,9 @@ const Home = () => {
       </div>
       
       <div className="portrait_container">
-        <img src="./images/Portrait-2.png" alt="portrait_numero_1" className={`portrait ${isHovering ?"" : "--hidden" }`}/>
-        <img src="./images/Portrait-2.png" alt="portrait_numero_2" className={`portrait1 ${isHovering ?"" : "--hidden" }`}/>
-        <img src="./images/Portrait-2.png" alt="portrait_numero_3" className={`portrait2 ${isHovering ?"" : "--hidden" }`}/>
+        <img src="./images/Portrait-2.webp" alt="portrait_numero_1" className={`portrait ${isHovering ?"" : "--hidden" }`}/>
+        <img src="./images/Portrait-2.webp" alt="portrait_numero_2" className={`portrait1 ${isHovering ?"" : "--hidden" }`}/>
+        <img src="./images/Portrait-2.webp" alt="portrait_numero_3" className={`portrait2 ${isHovering ?"" : "--hidden" }`}/>
       </div>
 
       <div className="right_side_text">

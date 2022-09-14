@@ -1,5 +1,5 @@
 import Image from "next/image";
-import scrollPng from "../public/images/scroll.png";
+import scrollPng from "../public/images/scroll.webp";
 import useReadingProgress from "./useReadingProgress";
 import { useState, useEffect } from "react";
 import Link from "next/link";

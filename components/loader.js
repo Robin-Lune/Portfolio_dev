@@ -45,7 +45,7 @@ const Loader = () => {
         </p>
       </div> */}
 
-     <img src="./images/title.png" alt="logo de Robin LEBON" className="loading_image"/>
+     <img src="./images/title.webp" alt="logo de Robin LEBON" className="loading_image"/>
 
       <div className="loading_bar_container">
         <div className="progress">

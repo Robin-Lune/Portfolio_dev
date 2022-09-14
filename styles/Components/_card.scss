@@ -2,13 +2,14 @@
   @include flex(row, space-between, center);
   width: 100vw;
   height: 100vh;
-  // scroll-snap-align: none;
+  scroll-snap-align: none;
 
 
   @include smartphone-up {
     @include flex(row, center, center);
     height: calc(100vh - 60px);
     margin-top: 60px;
+    scroll-snap-align: end;
   }
   @include tablet-up {
     @include flex(row, center, center);

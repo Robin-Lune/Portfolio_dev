@@ -55,7 +55,7 @@ const Menu = () => {
   return (
     <aside className={`menu ${burgerStatus ? "bg-active" : ""}`}>
 
-      <img src="./images/carre2.png" alt="" className={`menu_bg ${burgerStatus ? '' : '--hidden'}`} id='menu_bg' />
+      <img src="./images/carre2.webp" alt="" className={`menu_bg ${burgerStatus ? '' : '--hidden'}`} id='menu_bg' />
 
       <div className="menu__burger_container" onClick={function (event) {
         toggleBurger();
@@ -154,7 +154,7 @@ const Menu = () => {
           <p className={`social_text  ${burgerStatus ? "" : "--hidden"}`}>@ROBIN_LUNE</p>
 
           <img
-            src="./images/Web/twitter.png"
+            src="./images/Web/twitter.webp"
             alt=""
             className={`social_icon ${burgerStatus ? "" : "--disable"}`}
           />
@@ -170,7 +170,7 @@ const Menu = () => {
 <p className={`social_text  ${burgerStatus ? "" : "--hidden"}`}>@ROBIN_LUNE</p>
 
           <img
-            src="./images/Web/instagram.png"
+            src="./images/Web/instagram.webp"
             alt=""
             className={`social_icon ${burgerStatus ? "" : "--disable"}`}
           />
@@ -185,7 +185,7 @@ const Menu = () => {
           <p className={`social_text  ${burgerStatus ? "" : "--hidden"}`}>@ROBIN_LUNE</p>
 
           <img
-            src="./images/Web/GitHub.png"
+            src="./images/Web/GitHub.webp"
             alt=""
             className={`social_icon ${burgerStatus ? "" : "--disable"}`}
           />
@@ -200,7 +200,7 @@ const Menu = () => {
           <p className={`social_text  ${burgerStatus ? "" : "--hidden"}`}>@ROBIN_LUNE</p>
 
           <img
-            src="./images/Web/facebook.png"
+            src="./images/Web/facebook.webp"
             alt=""
             className={`social_icon ${burgerStatus ? "" : "--disable"}`}
           />

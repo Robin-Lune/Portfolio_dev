@@ -34,7 +34,7 @@ const Project = () => {
   return (
     <div className="projects">
 
-      <img className="projects__bg" src="./images/cercle2.png" alt="cercle" />
+      <img className="projects__bg" src="./images/cercle2.webp" alt="cercle" />
 
       <Head>
         <title>Robin LEBON - Projets</title>
@@ -56,7 +56,7 @@ const Project = () => {
             technologies={["chargement..."]}
             live={null}
             code={null}
-            image={"/images/site-dev.jpg"}
+            image={"./images/site-dev.webp"}
           />
         ) : (
           project.map((proj) => (
@@ -73,7 +73,7 @@ const Project = () => {
           ))
         )}
       </div>
-      <img className={`scroll_mobile ${completed ? "--disengage--mobile" : ""}`} src="./images/scroll.png" alt="flèche vers le bas" />
+      <img className={`scroll_mobile ${completed ? "--disengage--mobile" : ""}`} src="./images/scroll.webp" alt="flèche vers le bas" />
     </div>
   );
 };

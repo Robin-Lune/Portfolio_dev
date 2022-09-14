@@ -41,7 +41,7 @@ const About = () => {
       <Parallax speed={-5}className="image_bio_container" >
       
       <div className="image_bio_container__2">
-       <img src="./images/photoBio.jpg" alt="imade bio" className="image_bio_container__photo" />
+       <img src="./images/photoBio.webp" alt="imade bio" className="image_bio_container__photo" />
 
       </div>
       </Parallax>

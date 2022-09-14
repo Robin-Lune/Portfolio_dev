@@ -4,6 +4,10 @@
   width:100vw;
   @include flex(column,center,center);
   font-family: sans-serif;
+  @include smartphone-up {
+    height: calc(100vh - 60px);
+    // margin-top: 60px;
+  }
 }
 
 .hide {
@@ -40,8 +44,8 @@
   right: 50%;
   transform: translateX(50%);
   @include smartphone-up {
-
     width: 100vw;
+    bottom: 20vh;
 
   }
 }

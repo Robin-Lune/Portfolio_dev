@@ -7,6 +7,8 @@
 
   @include smartphone-up {
     @include flex(row, center, center);
+    height: calc(100vh - 60px);
+    margin-top: 60px ;
     width: 100vw;
     scroll-snap-align: none;
   }
@@ -30,7 +32,7 @@
       @include flex(column, flex-start, flex-start);
       width: 90%;
       height: 100%;
-      padding: 15vh 0 0 0 ;
+      padding: 120px 0 0 0 ;
     }
     @include tablet-up {
       // background-color: aqua;

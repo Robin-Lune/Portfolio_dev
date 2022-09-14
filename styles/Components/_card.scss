@@ -9,7 +9,7 @@
     @include flex(row, center, center);
     height: calc(100vh - 60px);
     margin-top: 60px;
-    scroll-snap-align: end;
+    scroll-snap-align: start;
   }
   @include tablet-up {
     @include flex(row, center, center);
@@ -32,7 +32,7 @@
     @include smartphone-up {
       @include flex(column, space-between, stretch);
       width: 90%;
-      padding: 0;
+      padding: 3vh 0 0 0;
     }
     @include tablet-up {
       @include flex(column, space-between, stretch);

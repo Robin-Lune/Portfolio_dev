@@ -6,6 +6,7 @@
   @include smartphone-up {
     @include flex(row, center, center);
     scroll-snap-align: none;
+    min-height: calc(100vh - 60px);
   }
 
   @include tablet-up {

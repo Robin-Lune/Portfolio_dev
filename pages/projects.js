@@ -56,7 +56,7 @@ const Project = () => {
             technologies={["chargement..."]}
             live={null}
             code={null}
-            image={"./images/site-dev.webp"}
+            image={"/images/site-dev.webp"}
           />
         ) : (
           project.map((proj) => (

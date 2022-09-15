@@ -19,6 +19,14 @@ const Index = () => {
       <Head>
         <title>Robin LEBON développeur web</title>
         <meta name="description" content="Portoflio de Robin LEBON développeur web frontend à la Réunion. Développeur web à la Réunion, développeur React JS, développeur web et web mobile" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
+        <meta name="theme-color" content="#111111" />
+        <meta name="apple-mobile-web-app-status-bar" content="#111111" />
+        <meta name="msapplication-navbutton-color" content="#111111" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        
         
 
         <link rel="icon" href="/favicon.ico" />

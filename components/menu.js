@@ -7,7 +7,7 @@ import Image from "next/image";
 import carreBg from "../public/images/carre2.webp";
 import twitter from "../public/images/Web/twitter.webp";
 import instagram from "../public/images/Web/instagram.webp";
-import github from "../public/images/Web/github.webp";
+import github from "../public/images/Web/GitHub.webp";
 import facebook from "../public/images/Web/facebook.webp";
 
 const Menu = () => {

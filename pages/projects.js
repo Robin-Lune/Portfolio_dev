@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import Card from "../components/card";
 import useReadingProgress from "../components/useReadingProgress";
+import Image from "next/image";
+import cercleBg from "/public/images/cercle2.webp";
 
 const Project = () => {
   const [project, setProject] = useState([]);
@@ -29,12 +31,18 @@ const Project = () => {
   useEffect(() => {
     changeCompletion();
   });
-  console.log(completed)
+  console.log(completed);
 
   return (
     <div className="projects">
-
-      <img className="projects__bg" src="./images/cercle2.webp" alt="cercle" />
+      <div className="projects__bg">
+        <Image
+          src={cercleBg}
+          alt="cercle"
+          layout="responsive"
+          objectFit="cover"
+        />
+      </div>
 
       <Head>
         <title>Robin LEBON - Projets</title>
@@ -47,7 +55,7 @@ const Project = () => {
 
       <h1>PROJETS</h1>
 
-<div className="card-container">
+      <div className="card-container">
         {project.length === 0 ? (
           <Card
             key={null}
@@ -73,7 +81,11 @@ const Project = () => {
           ))
         )}
       </div>
-      <img className={`scroll_mobile ${completed ? "--disengage--mobile" : ""}`} src="./images/scroll.webp" alt="flèche vers le bas" />
+      <img
+        className={`scroll_mobile ${completed ? "--disengage--mobile" : ""}`}
+        src="./images/scroll.webp"
+        alt="flèche vers le bas"
+      />
     </div>
   );
 };

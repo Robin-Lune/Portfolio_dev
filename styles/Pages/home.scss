@@ -40,15 +40,21 @@
     position: absolute;
     width: 67vw;
     max-width: 1500px;
-    overflow: hidden;
+    height: 100vh;
+    overflow: visible;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-40%) ;
     z-index: -5;
     @include smartphone-up {
       width: 130%;
-      left: 10%;
+      left: 80%;
+      top: 70%;
     }
     @include tablet-up {
       width: 130%;
-      left: 10%;
+      left: 80%;
+      top: 50%;
     }
   }
 

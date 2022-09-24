@@ -1,7 +1,9 @@
 import Head from "next/head";
 import {useState} from 'react';
 import { Parallax } from "react-scroll-parallax";
-
+import Image from 'next/image';
+import triangleBg from '/public/images/triangle2.webp';
+import portrait from '/public/images/Portrait-2.webp';
 
 
 const Home = () => {
@@ -53,11 +55,10 @@ const Home = () => {
         />
       </Head>
 
-      <img
-        src="./images/triangle2.webp"
-        alt="image d'un triangle"
-        className="background"
-      />
+      
+      <div className="background">
+        <Image src={triangleBg} alt="image d'un triangle" layout="responsive" objectFit="cover" priority={true} />
+      </div>
 
      
 

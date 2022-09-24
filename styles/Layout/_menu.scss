@@ -41,7 +41,7 @@
     position: absolute;
     left: 50%;
     top: 10%;
-    transform: translateX(-50%) rotate(0deg);
+    transform: translateX(-50%) rotate(-180deg);
     width: 50vw;
     max-width: 800px;
     transition: all ease 1s;
@@ -320,8 +320,9 @@
     }
 
     .social_icon {
-      width: auto;
-      height: 100%;
+      position: relative;
+      width: 35px;
+      height: 35px;
       transition: all 200ms ease-in-out;
     }
 
@@ -347,8 +348,6 @@
     }
     .--disable {
       filter: saturate(0) brightness(60%) contrast(400%);
-      width: 35px;
-      height: 35px;
     }
   }
 }

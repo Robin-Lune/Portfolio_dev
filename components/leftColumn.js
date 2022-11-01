@@ -52,7 +52,7 @@ const LeftColumn = () => {
       >
         <Image
           src={scrollPng}
-          alt="Picture of the author"
+          alt="flêches pour scroller"
           width={35}
           height={35}
         />

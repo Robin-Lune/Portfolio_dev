@@ -86,3 +86,16 @@
   }
   
 }
+
+//Image
+.image_404 {
+  width: 100%;
+  max-width: 252px;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  z-index: 10;
+  opacity: 0.5;
+  // filter: brightness(1) contrast(1.5) saturate(1.5);
+}
+

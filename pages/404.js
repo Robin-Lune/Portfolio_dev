@@ -1,5 +1,9 @@
 import React from 'react';
 import Head from "next/head";
+import Image from 'next/image';
+
+import nedry from "../public/images/dennis-nedry.gif";
+
 
 
 const Custom404 = () => {
@@ -16,7 +20,9 @@ const Custom404 = () => {
             <h1 className='side_text'>NOT FOUND</h1>
             <h2 className='error_title' data-text='404'>404</h2>
             <p>ahahah vous n&apos;avez pas dit le mot magique !!!</p>
-
+            <div className='image_404'>
+            <Image src={nedry} alt="Dennis Nedry from Jurasic Park" layout="responsive" objectFit="cover" priority={true} />
+            </div>
         </section>
     );
 };

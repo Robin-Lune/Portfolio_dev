@@ -5,9 +5,10 @@
 
   
   @include smartphone-up {
-    height: 100vh;
+    height: calc(100vh - 60px);
     width: 100vw;
     overflow: hidden;
+    margin-top: 60px;
   }
 
   .side_text {

@@ -8,6 +8,8 @@
 
   @include smartphone-up {
     scroll-snap-type: y mandatory;
+    // height: calc(100vh - 120px);
+    // margin-top: 120px;
   }
 
   /**

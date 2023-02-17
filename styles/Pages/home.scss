@@ -28,7 +28,6 @@
     scroll-snap-align: none;
   }
   @include tablet-up {
-
     scroll-snap-align: none;
   }
 
@@ -44,7 +43,7 @@
     overflow: visible;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-40%) ;
+    transform: translateX(-50%) translateY(-40%);
     z-index: -5;
     @include smartphone-up {
       width: 130%;
@@ -142,6 +141,11 @@
         font-size: 1em;
       }
     }
+    .--disengage {
+      text-decoration: line-through;
+      color: rgb(211, 102, 102);
+      font-weight: bold;
+    }
   }
 
   /**
@@ -161,14 +165,12 @@
       display: none;
     }
 
-
     .portrait {
       position: absolute;
       left: -25vw;
       width: auto;
       height: 70vh;
       z-index: -1;
-      
     }
     .portrait1 {
       position: absolute;
@@ -227,7 +229,5 @@
       border: none;
       // font-size: 2.5rem;
     }
-
-
   }
 }

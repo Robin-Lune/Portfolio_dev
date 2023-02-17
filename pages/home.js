@@ -76,8 +76,8 @@ const Home = () => {
         <p className="main_text_container__myJob">développeur web Frontend,</p>
         <p>photographe, vidéaste.</p>
         </Parallax>
-        <Parallax speed={5} >
-        <p className="otw">#open_to_work</p>
+        <Parallax speed={5} > 
+        <p className="otw --disengage">.#open_to_work.</p>
         </Parallax>
       </div>
       

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import SwitchBtn from "../components/switch";
 import Image from "next/image";
 
-import carreBg from "../public/images/carre2.webp";
+import carreBg from "../public/images/carre2_copie.webp";
 import twitter from "../public/images/Web/twitter.webp";
 import instagram from "../public/images/Web/instagram.webp";
 import github from "../public/images/Web/GitHub.webp";
@@ -235,7 +235,7 @@ const Menu = () => {
           href="https://github.com/Robin-Lune"
           target="_blank"
           rel="noreferrer"
-          className={`social_container__link  ${
+          className={`social_container__link ${
             burgerStatus ? "active_social" : ""
           }`}
         >
@@ -243,7 +243,11 @@ const Menu = () => {
             @ROBIN_LUNE
           </p>
 
-          <div className={`social_icon ${burgerStatus ? "" : "--disable"}`}>
+          <div
+            className={`social_icon  GitIcon  ${
+              burgerStatus ? "" : "--disable"
+            }`}
+          >
             <Image src={github} alt="github" layout="fill" objectFit="cover" />
           </div>
         </a>
@@ -270,6 +274,7 @@ const Menu = () => {
         </a>
         <SwitchBtn />
       </div>
+      <div className="noise"></div>
     </aside>
   );
 };

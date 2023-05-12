@@ -15,12 +15,21 @@
 **/
 
 .home {
-  @include flex(row, space-around, center);
+  // @include flex(row, center, center);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   position: relative;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   animation: flickering-2 1s forwards;
+
+  background-image: url("../../public/images/background_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @include smartphone-up {
     height: calc(100vh - 60px);
@@ -35,39 +44,16 @@
   * BACKGROUND IMAGE
   **/
 
-  .background {
-    position: absolute;
-    width: 67vw;
-    max-width: 1500px;
-    height: 100vh;
-    overflow: visible;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-40%);
-    z-index: -5;
-    @include smartphone-up {
-      width: 130%;
-      left: 80%;
-      top: 70%;
-    }
-    @include tablet-up {
-      width: 130%;
-      left: 80%;
-      top: 50%;
-    }
-  }
-
   /**
   * LEFT CONTAINER - INTRO TEXT
   **/
 
   .main_text_container {
-    display: flex;
+    position: relative;
     flex-direction: column;
     position: relative;
-    margin-top: -20vh;
-    margin-left: 6.5vw;
-    // background-color: aqua;
+    margin-top: 20vh;
+    margin-left: 10vw;
 
     @include smartphone-up {
       margin: auto;
@@ -123,9 +109,27 @@
       }
     }
     .main_text_container__myJob {
-      width: fit-content;
-      color: rgb(12, 12, 12);
-      background-color: rgb(238, 238, 238);
+      font-size: 1em;
+      // font-weight: 400;
+      margin-top: 20px;
+      width: 40vw;
+    }
+
+    .main_text_container__button {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 10px 20px;
+      border: 2px solid white;
+      border-radius: 2px;
+      margin-top: 6vh;
+      backdrop-filter: blur(5px);
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-family: "Michroma", sans-serif;
+      }
     }
 
     .otw {
@@ -145,57 +149,6 @@
       text-decoration: line-through;
       color: rgb(211, 102, 102);
       font-weight: bold;
-    }
-  }
-
-  /**
-  * PORTRAIT CONTAINER
-  **/
-
-  .portrait_container {
-    @include flex(row, space-around, center);
-    position: relative;
-    height: 100vh;
-    width: 100px;
-
-    @include smartphone-up {
-      display: none;
-    }
-    @include tablet-up {
-      display: none;
-    }
-
-    .portrait {
-      position: absolute;
-      left: -25vw;
-      width: auto;
-      height: 70vh;
-      z-index: -1;
-    }
-    .portrait1 {
-      position: absolute;
-      left: -25.4vw;
-      width: auto;
-      height: 70vh;
-      z-index: -1;
-      filter: sepia(2) hue-rotate(172deg) contrast(1.2) saturate(1);
-      opacity: 0.5;
-      animation: noise-anim-img 1s infinite linear alternate-reverse;
-    }
-
-    .portrait2 {
-      position: absolute;
-      left: -24.6vw;
-      width: auto;
-      height: 70vh;
-      z-index: -1;
-      filter: sepia(2) contrast(1.2) saturate(1);
-      opacity: 0.5;
-      animation: noise-anim-img-2 1.5s infinite linear alternate-reverse;
-    }
-
-    .--hidden {
-      display: none;
     }
   }
 

@@ -31,7 +31,7 @@ const LeftColumn = () => {
       <a href="">
         <div className="left_column__line_container">
           <p className="left_column__line_container__text">HOME</p>
-
+{/* 
           <span className="line_container__line"></span>
           <span className="line_container__line"></span>
           <span className="line_container__line"></span>
@@ -40,7 +40,7 @@ const LeftColumn = () => {
           <span className="line_container__line"></span>
           <span className="line_container__line"></span>
           <span className="line_container__line"></span>
-          <span className="line_container__line"></span>
+          <span className="line_container__line"></span> */}
         </div>
 
       </a>

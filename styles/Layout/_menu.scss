@@ -1,6 +1,6 @@
 .menu {
   @include flex(column, space-between, stretch);
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(40, 40, 40);
   position: fixed;
   top: 0;
   right: 0;
@@ -19,7 +19,7 @@
     animation: none;
   }
 
-/**
+  /**
 * NOISE BACKGROUND
 **/
   &::before {
@@ -30,9 +30,9 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.08;
+    opacity:1;
+   
   }
-
 
   /**
   * SQUARE BACKGROUND
@@ -64,15 +64,13 @@
     margin: 0 0 50px 100px;
     z-index: 10;
     cursor: none;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
 
     @include smartphone-up {
       display: none;
     }
   }
-
-
 
   /**
   * NAVIGATION
@@ -102,8 +100,9 @@
           position: relative;
           font-size: 1.6rem;
           cursor: none;
+          color: white;
 
-          @include tablet-up{
+          @include tablet-up {
             cursor: pointer;
           }
 
@@ -114,8 +113,8 @@
         }
 
         .active {
-          background-color: black;
-          color: white;
+          background-color: white;
+          color: black;
 
           &::after {
             content: attr(data-text);
@@ -123,7 +122,7 @@
             left: 2px;
             text-shadow: -1px 0 red;
             top: 0;
-            color: white;
+            color: black;
             background: transparent;
             overflow: hidden;
             clip: rect(0, 900px, 0, 0);
@@ -136,7 +135,7 @@
             left: -2px;
             text-shadow: 1px 0 blue;
             top: 0;
-            color: white;
+            color: rgb(0, 0, 0);
             background: transparent;
             overflow: hidden;
             clip: rect(0, 900px, 0, 0);
@@ -155,7 +154,7 @@
     position: absolute;
     top: 60px;
     left: 4px;
-    color: black;
+    color: white;
     @include smartphone-up {
       display: none;
     }
@@ -171,10 +170,9 @@
     padding-bottom: 0.6em;
     z-index: 100;
     transition: all ease 0.2s;
-    @include tablet-up{
+    @include tablet-up {
       cursor: pointer;
     }
-
 
     @include smartphone-up {
       width: 40px;
@@ -228,7 +226,7 @@
 
     .burger_container__line {
       position: relative;
-      background-color: rgb(0, 0, 0);
+      background-color: rgb(255, 255, 255);
       width: 200%;
       height: 0.6em;
       min-height: 0.6em;
@@ -236,7 +234,6 @@
       margin-top: 0.6em;
       transition: all ease 0.7s;
       // border: 1px solid black;
-
     }
   }
 
@@ -269,7 +266,7 @@
       height: 45px;
       cursor: none;
 
-      @include tablet-up{
+      @include tablet-up {
         cursor: pointer;
       }
 
@@ -330,6 +327,7 @@
       width: 250px;
       right: 0;
       margin-right: 10px;
+      color: white;
       .social_text {
         margin-right: 42px;
       }
@@ -346,8 +344,11 @@
         }
       }
     }
+    .GitIcon {
+      filter: invert(100%);
+    }
     .--disable {
-      filter: saturate(0) brightness(60%) contrast(400%);
+      filter: saturate(0) brightness(60%) contrast(400%) invert(100%);
     }
   }
 }
@@ -363,3 +364,4 @@
     height: 100vh;
   }
 }
+

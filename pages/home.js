@@ -1,13 +1,12 @@
 import Head from "next/head";
-import {useState} from 'react';
+import { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
-import Image from 'next/image';
-import triangleBg from '/public/images/triangle2.webp';
-import portrait from '/public/images/Portrait-2.webp';
-
+import Image from "next/image";
+import triangleBg from "/public/images/triangle2.webp";
+import portrait from "/public/images/Portrait-2.webp";
+import Link from "next/link";
 
 const Home = () => {
-
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseOver = () => {
@@ -22,7 +21,10 @@ const Home = () => {
     <section className="home">
       <Head>
         <title>Robin LEBON développeur web</title>
-        <meta name="description" content="Portoflio de Robin LEBON développeur web frontend à la Réunion. Développeur web à la Réunion, développeur React JS, développeur web et web mobile" />
+        <meta
+          name="description"
+          content="Portoflio de Robin LEBON développeur web frontend à la Réunion. Développeur web à la Réunion, développeur React JS, développeur web et web mobile"
+        />
 
         <link rel="icon" href="/favicon.ico" />
 
@@ -55,43 +57,45 @@ const Home = () => {
         />
       </Head>
 
-      
-      <div className="background">
-        <Image src={triangleBg} alt="image d'un triangle" layout="responsive" objectFit="cover" priority={true} />
-      </div>
-
-     
-
       <div className="main_text_container">
-      <Parallax speed={-10}>
+        <Parallax speed={-10}>
+          <p>
+            Je suis &nbsp;
+            <span
+              className="makeMeBiggerMfkr"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+              data-text="Robin LEBON"
+            >
+              Robin LEBON
+            </span>
+          </p>
+          <p className="main_text_container__myJob">
+            Plongez dans mon univers du développement web. <br />
+            Je suis passionné par React et le design rétro-futuriste.
+          </p>
 
-        <p>
-          Je suis <span className="makeMeBiggerMfkr" 
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-          data-text="Robin LEBON"
-          title="C'est ici pour faire apparaître ma tronche"
-          >Robin LEBON</span>
-        </p>
-        <p className="main_text_container__myJob">développeur web Frontend,</p>
-        <p>photographe, vidéaste.</p>
+          <div className="main_text_container__button_container">
+            <button className="main_text_container__button">
+              <Link href="/projects">Découvrez mon travail</Link>
+            </button>
+          </div>
         </Parallax>
-        <Parallax speed={5} > 
-        <p className="otw --disengage">.#open_to_work.</p>
+        <Parallax speed={5}>
+          <p className="otw --disengage">.#open_to_work.</p>
         </Parallax>
       </div>
-      
-      <div className="portrait_container">
+
+      {/* <div className="portrait_container">
         <img src="./images/Portrait-2.webp" alt="portrait_numero_1" className={`portrait ${isHovering ?"" : "--hidden" }`}/>
         <img src="./images/Portrait-2.webp" alt="portrait_numero_2" className={`portrait1 ${isHovering ?"" : "--hidden" }`}/>
         <img src="./images/Portrait-2.webp" alt="portrait_numero_3" className={`portrait2 ${isHovering ?"" : "--hidden" }`}/>
-      </div>
+      </div> */}
 
       <div className="right_side_text">
         <h1>FRONTEND</h1>
         <h2>developer</h2>
       </div>
-
     </section>
   );
 };

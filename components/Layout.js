@@ -14,7 +14,6 @@ const Layout = ({ children }) => {
   }, []);
   return (
     <main className="ecran ">
-      <div className="noise"></div>
       <Cursor/>
       <LeftColumn />
       {children}
